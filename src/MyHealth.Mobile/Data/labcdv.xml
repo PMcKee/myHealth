@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href='cda.xsl' type='text/xsl'?>
+<ClinicalDocument classCode="DOCCLIN" moodCode="EVN" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ../schemas/CDA.xsd">
+  <!-- document header -->
+  <typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+
+  <id extension="labcdv" root="2.16.840.1.113883.19.2744.1.1"/>
+  <!-- document type code identifies that this is a lab report -->
+  <code code="26436-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="All Laboratory Studies"/>
+  <title>Laboratory Report</title>
+  <effectiveTime value="20061025"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="Normal"/>
+
+  <!-- Patient Identification includes name, date of birth and gender. -->
+  <recordTarget contextControlCode="OP" typeCode="RCT">
+    <patientRole classCode="PAT">
+      <id extension="6910828" root="2.16.840.1.113883.19.2744.1.2"/>
+      <patient>
+        <name>
+          <given>Sample</given>
+          <given>H</given>
+          <family>Patient</family>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGender" displayName="Male"/>
+        <birthTime value="19320924"/>
+      </patient>
+    </patientRole>
+  </recordTarget>
+
+  <!-- author of the lab test result -->
+  <author contextControlCode="OP" typeCode="AUT">
+    <time value="20061025"/>
+    <assignedAuthor classCode="ASSIGNED">
+      <id extension="298379" root="2.16.840.1.113883.19.2744.1.3"/>
+    </assignedAuthor>
+  </author>
+
+  <!-- organization maintaining the document -->
+  <custodian typeCode="CST">
+    <assignedCustodian classCode="ASSIGNED">
+      <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id extension="ghc" root="2.16.840.1.113883.19.2744.1.3.1"/>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+
+  <!-- Attachment control number -->
+  <inFulfillmentOf>
+    <order>
+      <id extension="XA728302" root="2.16.840.1.113883.19.2744.1.5"/>
+    </order>
+  </inFulfillmentOf>
+
+  <!-- Patient encounter identified with provider account number, and date of encounter  -->
+  <componentOf>
+    <encompassingEncounter>
+      <id extension="773789090" root="2.16.840.1.113883.19.2744.1.4"/>
+      <effectiveTime value="20061002"/>
+      <!-- George Carson, MD, identified as the provider MD. -->
+      <responsibleParty>
+        <assignedEntity>
+          <id extension="298379" root="2.16.840.1.113883.19.2744.1.3"/>
+          <assignedPerson>
+            <name>
+              <given>George</given>
+              <given>F</given>
+              <family>Carson</family>
+              <suffix>MD</suffix>
+            </name>
+          </assignedPerson>
+        </assignedEntity>
+      </responsibleParty>
+    </encompassingEncounter>
+  </componentOf>
+
+  <!-- Begin Body, first Section and table heading. -->
+  <component contextConductionInd="true" typeCode="COMP">
+    <structuredBody>
+      <component>
+        <section>
+          <code code="24356-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="URINALYSIS PANEL"/>
+          <title>URINALYSIS COMPLETE</title>
+          <text>
+            <!-- comment that applies to the entire battery -->
+            <paragraph>
+              <content>This is a comment that applies to the entire urinalysis complete battery.</content>
+            </paragraph>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">Result name</th>
+                  <th align="right">Result value</th>
+                  <th align="center">Units</th>
+                  <th align="center">Normal Range</th>
+                  <th align="center">Abnormal flag</th>
+                  <th align="center">date/time</th>
+                </tr>
+              </thead>
+              <!-- urine color -->
+              <tbody>
+                <tr>
+                  <th ID="tr-1">urine color</th>
+                  <td align="right">STRAW</td>
+                  <td/>
+                  <td/>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine appearance with comment -->
+                <tr ID="tr-2">
+                  <th>urine appearance</th>
+                  <td align="right">CLEAR <footnote>This is a comment that applies to the urine appearance observation.</footnote></td>
+                  <td/>
+                  <td/>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine glucose -->
+                <tr ID="tr-3">
+                  <th>urine glucose (test strip)</th>
+                  <td align="right">1+</td>
+                  <td/>
+                  <td align="center">NEG</td>
+                  <td align="center">A</td>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine bilirubin -->
+                <tr ID="tr-4">
+                  <th>urine bilirubin (test strip)</th>
+                  <td align="right">NEG</td>
+                  <td/>
+                  <td align="center">NEG</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine keytones -->
+                <tr ID="tr-5">
+                  <th>urine ketones (test strip)</th>
+                  <td align="right">NEG</td>
+                  <td/>
+                  <td align="center">NEG</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine specific gravity -->
+                <tr ID="tr-6">
+                  <th>urine specific gravity (test strip)</th>
+                  <td align="right">1.007</td>
+                  <td/>
+                  <td align="center">1.005-1.030</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine PH -->
+                <tr>
+                  <th ID="tr-7">urine pH (test strip) </th>
+                  <td align="right">6</td>
+                  <td/>
+                  <td align="center">5.0-8.0</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine urobilinogen -->
+                <tr ID="tr-8">
+                  <th>urine urobilinogen</th>
+                  <td align="right">0.2</td>
+                  <td>mg/dL</td>
+                  <td align="center">0.2-1.0</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <!-- urine erythrocytes -->
+                <tr ID="tr-9">
+                  <th>urine erythrocytes</th>
+                  <td align="right">1</td>
+                  <td>/(hpf)</td>
+                  <td align="center">0-3</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <!-- urine color -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5778-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine color"/>
+              <text>
+                <reference value="#tr-1"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value xsi:type="ST">STRAW</value>
+            </observation>
+          </entry>
+          <!-- urine appearance -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5767-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine appearance"/>
+              <text>
+                <reference value="#tr-2"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value xsi:type="ST">CLEAR</value>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+            </observation>
+          </entry>
+          <!-- urine glucose -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5792-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine glucose (test strip)"/>
+              <text>
+                <reference value="#tr-3"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value xsi:type="ST">1+</value>
+              <interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Abnormal"/>
+              <referenceRange>
+                <observationRange>
+                  <value xsi:type="ST">NEG</value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <!-- urine bilirubin -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5770-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine bilirubin (test strip)"/>
+              <text>
+                <reference value="#tr-4"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value xsi:type="ST">NEG</value>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value xsi:type="ST">NEG</value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <!-- urine keytones -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5797-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine ketones (test strip)"/>
+              <text>
+                <reference value="#tr-5"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value xsi:type="ST">NEG</value>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value xsi:type="ST">NEG</value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <!-- urine specific gravity -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5811-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine specific gravity (test strip)"/>
+              <text>
+                <reference value="#tr-6"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value value="1.007" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value xsi:type="IVL_PQ">
+                    <low value="1.005"/>
+                    <high value="1.030"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <!-- urine PH -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5803-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine pH (test strip)"/>
+              <text>
+                <reference value="#tr-7"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="[pH]" value="6" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="[pH]" xsi:type="IVL_PQ">
+                    <low value="5"/>
+                    <high value="8"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <!-- urine urobilinogen -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="20405-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine urobilinogen"/>
+              <text>
+                <reference value="#tr-8"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="mg/dL" value="0.2" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="mg/dL" xsi:type="IVL_PQ">
+                    <low value="0.2"/>
+                    <high value="1.0"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <!-- urine erythrocytes -->
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="20405-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="urine erythrocytes"/>
+              <text>
+                <reference value="#tr-9"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="/[HPF]" value="1" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="/[HPF]" xsi:type="IVL_PQ">
+                    <low value="0"/>
+                    <high value="3"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <!-- second battery -->
+      <component>
+        <section>
+          <code code="24361-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="URINALYSIS PANEL"/>
+          <title>Hemogram, Platelets &amp; Differential Panel</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th>Result name</th>
+                  <th>Result value</th>
+                  <th>Units</th>
+                  <th>Normal Range</th>
+                  <th>Abnormal flag</th>
+                  <th>Date/time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th ID="tr-10">hematocrit</th>
+                  <td align="right">45</td>
+                  <td/>
+                  <td align="center">39-49</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-11">
+                  <th>erythrocytes count</th>
+                  <td align="right">4.94</td>
+                  <td>10*6/mm3</td>
+                  <td align="center">4.30-5.90</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-12">
+                  <th>mean corpuscular volume</th>
+                  <td align="right">91</td>
+                  <td>fl</td>
+                  <td align="center">90-98</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-13">
+                  <th>platelets count</th>
+                  <td align="right">233</td>
+                  <td> 10*3/mm3</td>
+                  <td align="center">150-450</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-14">
+                  <th>leukocytes count</th>
+                  <td align="right">25</td>
+                  <td>10*3/mm3</td>
+                  <td align="center">3.2-9.8</td>
+                  <td align="center">H</td>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-15">
+                  <th>neutrophils/100 leukocytes</th>
+                  <td align="right">83.1</td>
+                  <td>%</td>
+                  <td align="center">37.0-80.0</td>
+                  <td align="center">H</td>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-16">
+                  <th>basophils/100 leukocytes</th>
+                  <td align="right">10.1</td>
+                  <td>%</td>
+                  <td align="center">10.0-50.0</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-17">
+                  <th>monocytes/100 leukocytes</th>
+                  <td align="right">6.3</td>
+                  <td>%</td>
+                  <td align="center">0.0-12.0</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-18">
+                  <th>eosinophils/100 leukocytes</th>
+                  <td align="right">0.3</td>
+                  <td>%</td>
+                  <td align="center">0.0-7.0</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-19">
+                  <th>basophils/100 leukocytes</th>
+                  <td align="right">0.2</td>
+                  <td>%</td>
+                  <td align="center">0.0-2.0</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-20">
+                  <th>neutrophils count</th>
+                  <td align="right">20.8</td>
+                  <td>10*3/mm3</td>
+                  <td align="center">2.0-7.0</td>
+                  <td align="center">H</td>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-21">
+                  <th>lymphocytes count</th>
+                  <td align="right">2.5</td>
+                  <td>10*3/mm3</td>
+                  <td align="center">0.6-3.5</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-22">
+                  <th>monocytes count</th>
+                  <td align="right">1.6</td>
+                  <td>10*3/mm3</td>
+                  <td align="center">0.0-0.9</td>
+                  <td align="center">H</td>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-23">
+                  <th>eosinophils count</th>
+                  <td align="right">0.08</td>
+                  <td>10*3/mm3</td>
+                  <td align="center">0.00-0.70</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+                <tr ID="tr-24">
+                  <th>basophils count</th>
+                  <td align="right">0.04</td>
+                  <td>10*3/mm3</td>
+                  <td align="center">0.00-0.20</td>
+                  <td/>
+                  <td align="center">10/2/2006 6:38 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="4544-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="hematocrit"/>
+              <text>
+                <reference value="#tr-10"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value value="45" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value xsi:type="IVL_PQ">
+                    <low value="39"/>
+                    <high value="49"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="789-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="erythrocytes count"/>
+              <text>
+                <reference value="#tr-11"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*6/mm3" value="4.94" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*6/mm3" xsi:type="IVL_PQ">
+                    <low value="4.30"/>
+                    <high value="5.90"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="787-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="mean corpuscular volume"/>
+              <text>
+                <reference value="#tr-12"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="fl" value="91" xsi:type="PQ"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="fl" xsi:type="IVL_PQ">
+                    <low value="90"/>
+                    <high value="98"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="777-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="platelets count"/>
+              <text>
+                <reference value="#tr-13"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*3/mm3" value="233" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*3/mm3" xsi:type="IVL_PQ">
+                    <low value="150"/>
+                    <high value="450"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="6690-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="leukocytes count"/>
+              <text>
+                <reference value="#tr-14"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*3/mm3" value="25" xsi:type="PQ"/>
+              <interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="TBD"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*3/mm3" xsi:type="IVL_PQ">
+                    <low value="3.2"/>
+                    <high value="9.8"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="770-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="neutrophils/100 leukocytes"/>
+              <text>
+                <reference value="#tr-15"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="%" value="83.1" xsi:type="PQ"/>
+              <interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="TBD"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="%" xsi:type="IVL_PQ">
+                    <low value="37.0"/>
+                    <high value="80.0"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="706-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="basophils/100 leukocytes"/>
+              <text>
+                <reference value="#tr-16"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="%" value="10.1" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="%" xsi:type="IVL_PQ">
+                    <low value="10.0"/>
+                    <high value="50.0"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="5905-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="monocytes/100 leukocytes"/>
+              <text>
+                <reference value="#tr-17"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="%" value="6.3" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="%" xsi:type="IVL_PQ">
+                    <low value="0.0"/>
+                    <high value="12.0"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="713-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="eosinophils/100 leukocytes"/>
+              <text>
+                <reference value="#tr-18"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="%" value="0.3" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="%" xsi:type="IVL_PQ">
+                    <low value="0.0"/>
+                    <high value="7.0"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="706-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="basophils/100 leukocytes"/>
+              <text>
+                <reference value="#tr-19"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="%" value="0.2" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="%" xsi:type="IVL_PQ">
+                    <low value="0.0"/>
+                    <high value="2.0"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="751-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="neutrophils count"/>
+              <text>
+                <reference value="#tr-20"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*3/mm3" value="20.8" xsi:type="PQ"/>
+              <interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="TBD"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*3/mm3" xsi:type="IVL_PQ">
+                    <low value="2.0"/>
+                    <high value="7.0"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="731-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="lymphocytes count"/>
+              <text>
+                <reference value="#tr-21"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*3/mm3" value="2.5" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*3/mm3" xsi:type="IVL_PQ">
+                    <low value="0.6"/>
+                    <high value="3.5"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="742-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="monocytes count"/>
+              <text>
+                <reference value="#tr-22"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*3/mm3" value="1.6" xsi:type="PQ"/>
+              <interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="TBD"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*3/mm3" xsi:type="IVL_PQ">
+                    <low value="0.0"/>
+                    <high value="0.9"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="711-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="eosinophils count"/>
+              <text>
+                <reference value="#tr-23"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*3/mm3" value="0.08" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*3/mm3" xsi:type="IVL_PQ">
+                    <low value="0.00"/>
+                    <high value="0.70"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="704-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="basophils count"/>
+              <text>
+                <reference value="#tr-24"/>
+              </text>
+              <effectiveTime value="200610021838"/>
+              <value unit="10*3/mm3" value="0.04" xsi:type="PQ"/>
+              <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+              <referenceRange>
+                <observationRange>
+                  <value unit="10*3/mm3" xsi:type="IVL_PQ">
+                    <low value="0.00"/>
+                    <high value="0.20"/>
+                  </value>
+                  <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="ObservationInterpretation" displayName="Normal"/>
+                </observationRange>
+              </referenceRange>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <!-- Close body and document -->
+    </structuredBody>
+  </component>
+</ClinicalDocument>

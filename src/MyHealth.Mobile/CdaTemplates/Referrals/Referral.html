@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyHealth</title>
+        <link rel="stylesheet" href="Content/mobileThemes/jqtouch.css" type="text/css" /> 
+        <link rel="stylesheet" href="Content/mobileThemes/theme.css" type="text/css" /> 
+        <link rel="stylesheet" href="Content/referral.css" type="text/css" /> 
+        <script type="text/javascript" src="Scripts/jquery.js"></script> 
+        <script type="text/javascript" src="Scripts/jquery.tmpl.js"></script> 
+        <!--<script type="text/javascript" src="Scripts/knockout.js"></script> --> 
+        <script type="text/javascript" src="Scripts/jqtouch.js"></script> 
+        <script type="text/javascript" src="Scripts/Referrals.js"></script> 
+        <!--<script type="text/javascript" src="Scripts/Mobile/myHealth-ViewModel.js"></script> 
+        <script type="text/javascript" src="Scripts/Mobile/MyHealth.DataStorage_Sql.js"></script> -->
+    </head>
+
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>Referral</h1>
+                <a class="button flip" href="#settings">Settings</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="mainMenuPatients" class="arrow"><a href="#patient">Patient</a></li>
+                <li class="arrow"><a href="#reason">Reason</a></li>
+                <li class="arrow"><a href="#medications">Medications</a></li>
+            </ul>
+        </div>
+        <div id="patient">
+            <div class="toolbar">
+                <h1>Patient</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <div>
+                <p>Patient demographic details</p>
+                <ul>
+                    <li><First Name:<span type="text" placeholder="FirstName" name="name" id="firstname" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><span>Last Name</span><input type="text" placeholder="LastName" name="name" id="lastname" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><span>Date of Birth</span><input type="date" placeholder="Date of Birth" name="dob" id="dob" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+
+                </ul>
+            </div>
+        </div>
+
+
+         <div id="reason">
+            <div class="toolbar">
+                <h1>Referral Reason</h1>
+                <a class="button back" href="#">Back</a>
+                <a class="button slideup" href="#createPatient">+</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="patientTemplate" class="entry">
+                    <span>Reason for Referral:</span>
+                    <textarea placeholder="Reason" type="text" name="reasonText" id="reasonText" rows='25'autocapitalize="on" autocorrect="on" autocomplete="om" > </textarea>
+                </li>
+            </ul>
+        </div>
+
+         <div id="medications">
+            <div class="toolbar">
+                <h1>Medications</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li>
+                        <!--<input type="submit" class="submit" name="waction" value="Save" />-->
+                        <div id='createpatientButton' style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit">Save</div> 
+                     </li>
+                </ul>
+               
+            </form>
+        </div>
+     
+    </body>
+</html>

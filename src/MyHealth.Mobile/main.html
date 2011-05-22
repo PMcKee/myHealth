@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyHealth</title>
+        <link rel="stylesheet" href="Content/mobileThemes/jqtouch.css" type="text/css" /> 
+        <link rel="stylesheet" href="Content/mobileThemes/theme.css" type="text/css" /> 
+        <link rel="stylesheet" href="Content/mobileThemes/myHealth.css" type="text/css" /> 
+        <script type="text/javascript" src="Scripts/jquery.js"></script> 
+        <script type="text/javascript" src="Scripts/jquery.tmpl.js"></script> 
+        <script type="text/javascript" src="Scripts/knockout.js"></script> 
+        <script type="text/javascript" src="Scripts/Mobile/jqtouch.js"></script> 
+        <script type="text/javascript" src="Scripts/Mobile/myHealth.js"></script> 
+        <script type="text/javascript" src="Scripts/Mobile/myHealth-ViewModel.js"></script> 
+        <script type="text/javascript" src="Scripts/Mobile/MyHealth.DataStorage_Sql.js"></script> 
+<!--        <script type="text/javascript" src="CdaTemplates/Scripts/TemplateCore.js"></script> 
+        <script type="text/javascript" src="CdaTemplates/Scripts/tiny_mce/jquery.tinymce.js"></script> 
+        -->
+
+    </head>
+
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>My Health</h1>
+                <a class="button flip" href="#settings">Settings</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="mainMenuPatients" class="arrow"><a href="#patients">Patients</a></li>
+                <li class="arrow"><a href="#appointments">Appointments</a></li>
+                <li class="arrow"><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <div id="about">
+            <div class="toolbar">
+                <h1>About</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <div>
+                <p>myHealth gives you easy access to your Health Record.</p>
+                <div id='cleanDb' style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit">Clean Data Store</div> 
+               
+            </div>
+        </div>
+        <div id="patients">
+             <div class="toolbar">
+                <h1>Patients</h1>
+                <a class="button back" href="#">Back</a>
+                <a class="button slideup" href="#createPatient">+</a>
+            </div>
+            <p>Select your Patient.</p>
+               
+            <ul class="edgetoedge" data-bind='template: { name: "patientsTemplate", 
+                        foreach: patients, 
+                        beforeRemove: function(elem) { $(elem).slideUp() },
+                        afterAdd: function(elem) { $(elem).hide().slideDown() } }'> 
+
+                <script pt type="text/html"  id="patientsTemplate">
+                    <li class="patient" data-id=${id} onclick='loadPatientDocuments(this,${id})' >
+                        <a id="0"  data-id=${ id } href="#PatientRecord">
+                            <span class="name">${ lastName },  ${ firstName }</span>
+                            <span class="dateOfBirth"> (dob: ${ dateOfBirth })</span>
+                        </a>
+
+                        <span class="button edit" onclick="BindEditPatient(this,${ id });">Edit</span>
+                        <a class="edit" href="#createPatient" onclick="BindEditPatient(this,${ id });">Edit</a>
+                        <span class="delete" onclick="BindDeletePatient(this,${ id });">Delete</span>
+                    </li>
+                </script>
+            </ul>
+
+             <ul class="edgetoedge">
+                <li id="entryDateTemplate2" class="entry"  style="display:none">
+                    <span class="label">Label</span>
+                    <span class="calories">000</span>
+                    <span class="delete">Delete</span>
+                </li>
+            </ul>
+           
+        </div>
+
+         <div id="patient">
+            <div class="toolbar">
+                <h1>Date</h1>
+                <a class="button back" href="#">Back</a>
+                <a class="button slideup" href="#createPatient">+</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="patientTemplate" class="entry" style="display:none">
+                    <span class="name">Namexxx</span>
+                    <span class="dateOfBirth">000</span>
+                    <span class="delete">Delete</span>
+                </li>
+            </ul>
+        </div>
+
+         <div id="createPatient">
+            <div class="toolbar">
+                <h1>New Patient</h1>
+                <a class="button back" href="#">back</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li><span>First Name</span><input  type="text" placeholder="FirstName" name="name" id="firstname" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><span>Last Name</span><input type="text" placeholder="LastName" name="name" id="lastname" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><span>Date of Birth</span><input type="date" placeholder="Date of Birth" name="dob" id="dob" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><div id='divOtherPatientInfo' style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit">Add more information</div>
+                        <div id='patientAddress'  style="display:none">
+                            <ul class="rounded">
+                                    <li><span>Line 1</span><input type="text" placeholder="Address Line 1" name="addressLine1" id="addressLine1" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                                    <li><span>Line 2</span><input type="text" placeholder="Address Line 2" name="addressLine2" id="addressLine2" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                                    <li><span>Suburb</span><input type="text" placeholder="Suburb" name="addressSuburb" id="addressSuburb" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                                    <li><span>State</span><input type="text" placeholder="State" name="addressState" id="addressState" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <!--<input type="submit" class="submit" name="waction" value="Save" />-->
+                        <div id='createpatientButton' style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit">Save</div> 
+                        <div id='createpatientCancel' style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit">Cancel</div> 
+                     </li>
+                </ul>
+               
+            </form>
+        </div>
+     
+         <div id="date">
+            <div class="toolbar">
+                <h1>Date</h1>
+                <a class="button back" href="#">Back</a>
+                <a class="button slideup" href="#createEntry">+</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="entryDateTemplate" class="entry" style="display:none">
+                    <span class="label">Label</span>
+                    <span class="calories">000</span>
+                    <span class="delete">Delete</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="createEntry">
+            <div class="toolbar">
+                <h1>New Entry</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li><input type="text" placeholder="Patient" name="appointmentpatienName" id="appointmentpatienName" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="text" placeholder="Reason" name="appointmentReason" id="appointmentReason" autocapitalize="off" autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="submit" class="submit" name="waction" value="Save Entry" /></li>
+                </ul>
+            </form>
+        </div>
+
+        <div id="PatientRecord">
+            <div class="toolbar">
+               <h1><span data-bind='text: formatPatientName(currentPatient)'></span></h1>
+                <a class="button cancel" href="#">Cancel</a>
+                <a class="button slideup" href="#addDocument">+</a>
+            </div>
+
+           <!-- <form method="post">
+                <ul class="rounded">
+                    <li><span>All</span> (<span data-bind='text: documents.length'></span>) - Last Updated: 25/01/2011</li>
+                    <li><span>Meds</span> (5) - Last Updated: 20/01/2011</li>
+                    <li><span>Investigations</span> (15) - Last Updated: 23/01/2011</li>
+                    <li><span>Docs/Notes</span> (20) - Last Updated: 25/01/2011</li>   
+                </ul>
+            </form>
+        -->
+        <!--------------------->
+             <ul id='groupedDocs' class="edgetoedge" data-bind='template: { name: "documentsTemplate", 
+                        foreach: documents, 
+                        beforeRemove: function(elem) { $(elem).slideUp() },
+                        afterAdd: function(elem) { $(elem).hide().slideDown() } }'> 
+
+                <script type="text/html" id="documentsTemplate">
+                    <li class="document" data-id=${ id } onclick='loadDocument(this,${ id })' >
+                        <a id="0"  data-id=${ id } href="#docView">
+                            <span class="name">${ doctype },  ${ id } - (${ eventTime } )</span>
+                        </a>
+                        <span class="delete" onclick="BindDeleteDocument(this,${ id });">Delete</span>
+
+                    </li>
+                </script>
+            </ul>
+        </div>
+
+        <div id="addDocument">
+            <div class="toolbar">
+                <h1>New Document</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li>                    
+                        <div class="fileinputs">
+	                       <input type="file" class="file" onselect="handle_files(this.files)" onchange="handle_files(this.files)"/>
+	                            <span class="fakebutton">Choose File</span>
+                        </div>
+                    </li>
+                    
+                    <li><input type="submit" class="submit" name="waction" value="Save Entry" /></li>
+                </ul>
+                <ul>
+                    <li><input type="url" id="fileUrl" name="fileUrl" value="Data/ds.xml"/></li> 
+                    <li><input type="text" id="doctype" name="doctype" value="DS"/></li> 
+                    <li><a href="#docView"> <div id='btnCreateReferral' style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit fileuploadUrl">Create Referral</div></a></li>
+                    <li><div id='btnUploadDS' style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit fileuploadUrl">Upload Discharge Summary</div></li>
+                    <li><div id='btnUploadPath'  style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit fileuploadUrl">Upload Pathology Result</div></li>
+                    <li><div id='btnUploadCCD'  style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit fileuploadUrl">Upload Continuity of Care Document</div></li>
+                    <li><div id='btnUploadReferral'  style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit fileuploadUrl">Upload Referral Result</div></li>
+                    <li><div id='btnUploadPatient'  style="margin:0 10px;color:rgba(0,0,0,.9)" class="whiteButton submit fileuploadUrl">Upload Patients Details</div></li>
+                </ul>
+                
+            </form>
+        </div>
+
+         <div id="appointments">
+            <div class="toolbar">
+                <h1>Appointments</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+           <ul class="edgetoedge">
+                <li class="arrow"><a id="0" href="#date">Today</a></li>
+                <li class="arrow"><a id="1" href="#date">Yesterday</a></li>
+                <li class="arrow"><a id="2" href="#date">2 Days Ago</a></li>
+                <li class="arrow"><a id="3" href="#date">3 Days Ago</a></li>
+                <li class="arrow"><a id="4" href="#date">4 Days Ago</a></li>
+                <li class="arrow"><a id="5" href="#date">5 Days Ago</a></li>
+            </ul>
+        </div>
+
+        <div id="settings">
+            <div class="toolbar">
+                <h1>Settings</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul class="rounded">
+                    <li>Age<input placeholder="User Id" type="text" name="userId" id="userId" /></li>
+                    <li>Weight<input placeholder="First Name" type="text" name="firstName" id="firstName" /></li>
+                    <li>Budget<input placeholder="Last Name" type="text" name="lastName" id="lastName" /></li>
+                    <li><input type="submit" class="submit" name="waction" value="Save Changes" /></li>
+                </ul> 
+            </form>
+        </div>
+
+        <div id="docView">
+            <div class="toolbar">
+                <h1>Document</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+                <div 
+                    id='docContentsDivBind' 
+                    class='clinicalDoc' 
+                    data-bind='html: renderCda(currentDocument.document)'>??
+                </div>
+                <!-- data-bind='html: $("#docContentsDivBind").html(renderCda(currentDocument.document))'>?? -->
+                <!--<div id='docContentsDiv' class='clinicalDoc'>Div contents...</div> -->
+        </div>
+
+    </body>
+</html>

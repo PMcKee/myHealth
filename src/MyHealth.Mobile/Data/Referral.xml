@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns:hl7="urn:hl7-org:v3" xmlns="urn:hl7-org:v3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ../Schemas/CDA.xsd">
+	<!-- 
+********************************************************
+e-MS CDA Header
+********************************************************
+-->
+	<id  extension="DEAF84EC-87F7-4bff-BDB6-9DF00644D80D" root="2.16.840.1.113883.3.933"/>
+	<code code="34140-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Referral"/>
+	<title/>
+	<effectiveTime value="20040809142222"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<!-- 
+********************************************************
+Information Recipient
+********************************************************
+-->
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient classCode="ASSIGNED">
+			<id  extension="ppump" root="DCCD2C68-389B-44c4-AD99-B8FB2DAD1493"/>
+			<addr>
+				<streetAddressLine>4444 Healthcare Drive</streetAddressLine>
+				<city>Ann Arbor</city>
+				<state>BC</state>
+				<postalCode>A1B 2C3</postalCode>
+				<country>CA</country>
+			</addr>
+			<telecom value="tel:(555)555-1009" use="WP"/>
+			<telecom value="fax:(555)555-1199" use="WP"/>
+			<informationRecipient>
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Patrick</given>
+					<given>P.</given>
+					<family>Pump</family>
+					<suffix>Sr.</suffix>
+				</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<name>Level 7 Healthcare, Inc</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<!-- 
+********************************************************
+Author
+********************************************************
+-->
+	<author>
+		<time value="20040812120000"/>
+		<assignedAuthor>
+			<id extension="hhippocrates" root="DCCD2C68-389B-44c4-AD99-B8FB2DAD1493"/>
+			<addr>
+				<streetAddressLine>4444 Healthcare Drive</streetAddressLine>
+				<city>Ann Arbor</city>
+				<state>BC</state>
+				<postalCode>A1B 2C3</postalCode>
+				<country>CA</country>
+			</addr>
+			<telecom value="tel: (555) 555-1003" use="WP"/>
+			<telecom value="fax: (555) 555-1133" use="WP"/>
+			<assignedPerson>
+				<name>
+					<prefix>Dr.</prefix>
+					<given>Harold</given>
+					<given>H.</given>
+					<family>Hippocrates</family>
+					<suffix>the 1st</suffix>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<author>
+		<time value="20040812120000"/>
+		<assignedAuthor>
+			<id extension="hhippocrates" root="DCCD2C68-389B-44c4-AD99-B8FB2DAD1493"/>
+			<assignedAuthoringDevice>
+				<softwareName>e-MS Web</softwareName>
+			</assignedAuthoringDevice>
+		</assignedAuthor>
+	</author>
+	<!-- 
+********************************************************
+Custodian
+********************************************************
+-->
+	<custodian typeCode="CST">
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="123" root="7EEF0BCC-F03E-4742-A736-8BAC57180C5F"/>
+				<name>Level 7 Healthcare, Inc</name>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<!-- 
+********************************************************
+Record Target
+********************************************************
+-->
+	<recordTarget typeCode="RCT" contextControlCode="OP">
+		<patient classCode="PAT">
+			<id extension="9999999999" root="2BFBA1E9-79C2-4bbb-B589-41B949BD6A3B" assigningAuthorityName="BC-PHN"/>
+			<id extension="99999-9" assigningAuthorityName="WCB"/>
+			<addr>
+				<streetAddressLine>2222 Home Street</streetAddressLine>
+				<city>Ann Arbor</city>
+				<state>BC</state>
+				<postalCode>A1B 2C3</postalCode>
+				<country>CA</country>
+			</addr>
+			<telecom value="tel: (555) 555-2003" use="HP"/>
+			<telecom value="mailto: Eve.Everywoman@eg.net" use="HP"/>
+			<patientPatient>
+				<name>
+					<prefix>Mrs.</prefix>
+					<given>Eve</given>
+					<given>E.</given>
+					<family>Everywoman</family>
+					<suffix>Jr.</suffix>
+				</name>
+				<administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 - Administrative Gender" displayName="Female"/>
+				<birthTime value="19650516"/>
+				<languageCommunication>
+					<languageCode code="EN"/>
+				</languageCommunication>
+			</patientPatient>
+		</patient>
+	</recordTarget>
+	<!-- 
+********************************************************
+Participant - Contact
+********************************************************
+-->
+	<participant typeCode="NOT">
+		<participatingEntity classCode="CON">
+			<code code="HUSB" codeSystem="F05716F7-BA77-4641-A8D8-6E3948CCD321" codeSystemName="HL7: PersonalRelationshipRoleType" displayName="Husband"/>
+			<addr>
+				<streetAddressLine>2222 Home Street</streetAddressLine>
+				<city>Ann Arbor</city>
+				<state>BC</state>
+				<postalCode>A1B 2C3</postalCode>
+				<country>CA</country>
+			</addr>
+			<telecom value="tel:(555) 555-5001" use="HP"/>
+			<telecom value="mailto: Neville.Nuclear@eg.net" use="HP"/>
+			<associatedPerson>
+				<name>
+					<prefix>Mr.</prefix>
+					<given>Neville</given>
+					<given>N.</given>
+					<family>Nuclear</family>
+					<suffix>III</suffix>
+				</name>
+			</associatedPerson>
+		</participatingEntity>
+	</participant>
+	<participant typeCode="NOT">
+		<participatingEntity classCode="CON">
+			<code code="NCHLD" codeSystem="F05716F7-BA77-4641-A8D8-6E3948CCD321" codeSystemName="HL7: PersonalRelationshipRoleType" displayName="Natural Child"/>
+			<addr>
+				<streetAddressLine>6666 Home Street</streetAddressLine>
+				<city>Ann Arbor</city>
+				<state>BC</state>
+				<postalCode>A1B 2C3</postalCode>
+				<country>CA</country>
+			</addr>
+			<telecom value="tel:(555) 555-5001" use="HP"/>
+			<telecom value="mailto:Nancy.Nuclear@eg.net" use="HP"/>
+			<associatedPerson>
+				<name>
+					<prefix>Ms.</prefix>
+					<given>Nancy</given>
+					<given>N.</given>
+					<family>Nuclear</family>
+					<suffix>Sr.</suffix>
+				</name>
+			</associatedPerson>
+		</participatingEntity>
+	</participant>
+	<!-- 
+********************************************************
+Related Document
+********************************************************
+-->
+	<relatedDocument typeCode="RPLC">
+		<parentDocument>
+			<id extension="B7330FD6-E812-4b4f-809C-32172EF21812" root="2.16.840.1.113883.3.933"/>
+			<code code="34140-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Referral"/>
+			<text>A previous referral is related to this document</text>
+		</parentDocument>
+	</relatedDocument>
+	<!-- 
+********************************************************
+e-MS CDA Structured Body
+********************************************************
+-->
+	<component>
+		<structuredBody>
+			<!-- 
+********************************************************
+Purpose
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="001" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Document Section Codes" displayName="Purpose"/>
+					<title>Referral Purpose</title>
+					<text>
+						<paragraph> 
+								Please see this patient regarding occasional occurrences of arrhythmia at rest accompanied with mild shortness of breath. Mild exercise leads to faintness and mild chest pain. 
+							</paragraph>
+						<paragraph> 
+								Urgency: expedite
+							</paragraph>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Other Provider</th>
+									<th>Reason</th>
+								</tr>
+								<tr>
+									<td>Dr. Vera V. Valve at Level 7 Healthcare, Inc </td>
+									<td>High blood pressure in the past</td>
+								</tr>
+								<tr>
+									<td>Dr. Sara S. Specialize at Good Health Hospital</td>
+									<td>24 Hour ECG recording</td>
+								</tr>
+							</tbody>
+						</table>
+						<paragraph>
+								Comments: The patient expressed that this problem has gradually been getting worse over the course of the past year and a half.
+							</paragraph>
+					</text>
+					<entry typeCode="DRIV">
+						<observation classCode="OBS" moodCode="EVN">
+							<code nullFlavor="NA"/>
+							<text>Please see this patient regarding occasional occurrences of arrhythmia at rest accompanied with mild shortness of breath. Mild exercise leads to faintness and mild chest pain. </text>
+							<priorityCode code="E" codeSystem="1261620F-C09D-4825-96E4-E808DCFA4D17" codeSystemName="eMS_Purpose_Urgency" displayName="Expedite (call)"/>
+							<value xsi:type="ST">The patient expressed that this problem has gradually been getting worse over the course of the past year and a half.</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Alerts
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="002" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Document Section Codes" displayName="Alerts"/>
+					<title>Alerts</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Alert</th>
+									<th>Comments</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>History of violence</td>
+									<td>Mostly towards family members</td>
+									<td>1999</td>
+								</tr>
+								<tr>
+									<td>History of mental illness</td>
+									<td>Mild anxiety disorder</td>
+									<td>August 2000</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code nullFlavor="NA"/>
+							<text>History of violence</text>
+							<effectiveTime value="1999"/>
+							<value xsi:type="ST">Mostly towards family members</value>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code nullFlavor="NA"/>
+							<text>History of mental illness</text>
+							<effectiveTime value="200008"/>
+							<value xsi:type="ST">Mild anxiety disorder</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Social History/Risks
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social History/Risks"/>
+					<title>Social History/Risks</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Social History/Risk</th>
+									<th>Comments</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Smoking</td>
+									<td>2 packs of cigarettes per day in her early teens</td>
+									<td>1979-1982</td>
+								</tr>
+								<tr>
+									<td>Alcohol consumption</td>
+									<td>3 glasses of wine per day</td>
+									<td>January 2000</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code nullFlavor="NA"/>
+							<text>Smoking</text>
+							<effectiveTime value="19790000000000.19820000000000"/>
+							<value xsi:type="ST">2 packs of cigarettes per day starting in her early teens.</value>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code nullFlavor="NA"/>
+							<text>Alcohol consumption</text>
+							<effectiveTime value="200001"/>
+							<value xsi:type="ST">3 glasses of wine per day.</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Examination Measurements
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="003" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Document Section Codes" displayName="Examination Measurements"/>
+					<title>Examination Measurements</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th/>
+									<th>Height</th>
+									<th>Weight</th>
+									<th>Blood Pressure</th>
+									<th>Pulse</th>
+								</tr>
+								<tr>
+									<td>
+										<content styleCode="bold">January 13, 2000</content>
+									</td>
+									<td>172 cm</td>
+									<td>65 Kg</td>
+									<td>130/80</td>
+									<td>80 BPM</td>
+								</tr>
+								<tr>
+									<td>
+										<content styleCode="bold">March 18, 2001</content>
+									</td>
+									<td>172 cm</td>
+									<td>70 Kg</td>
+									<td>145/95</td>
+									<td>90 BPM </td>
+								</tr>
+								<tr>
+									<td>
+										<content styleCode="bold">September 22, 2003</content>
+									</td>
+									<td>172 cm</td>
+									<td>78 Kg</td>
+									<td>160/110</td>
+									<td>92 BPM</td>
+								</tr>
+								<tr>
+									<td>
+										<content styleCode="bold">August 9, 2004</content>
+									</td>
+									<td>172 cm </td>
+									<td>80 Kg</td>
+									<td>160/130</td>
+									<td>94 BPM</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height"/>
+							<effectiveTime value="20000113"/>
+							<value xsi:type="PQ" value="172" unit="cm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Weight"/>
+							<effectiveTime value="20000113"/>
+							<value xsi:type="PQ" value="65" unit="kg"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="11328-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pulse"/>
+							<effectiveTime value="20000113"/>
+							<value xsi:type="PQ" value="80" unit="bpm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="004" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Blood Pressure"/>
+							<effectiveTime value="20000113"/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="005" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Systolic Blood Pressure"/>
+									<value xsi:type="PQ" value="130" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="006" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Diastolic Blood Pressure"/>
+									<value xsi:type="PQ" value="80" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height"/>
+							<effectiveTime value="20010318"/>
+							<value xsi:type="PQ" value="172" unit="cm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Weight"/>
+							<effectiveTime value="20010318"/>
+							<value xsi:type="PQ" value="70" unit="kg"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="11328-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pulse"/>
+							<effectiveTime value="20010318"/>
+							<value xsi:type="PQ" value="90" unit="bpm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="004" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Blood Pressure"/>
+							<effectiveTime value="20010318"/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="005" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Systolic Blood Pressure"/>
+									<value xsi:type="PQ" value="145" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="006" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Diastolic Blood Pressure"/>
+									<value xsi:type="PQ" value="95" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height"/>
+							<effectiveTime value="20030922"/>
+							<value xsi:type="PQ" value="172" unit="cm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Weight"/>
+							<effectiveTime value="20030922"/>
+							<value xsi:type="PQ" value="78" unit="kg"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="11328-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pulse"/>
+							<effectiveTime value="20030922"/>
+							<value xsi:type="PQ" value="92" unit="bpm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="004" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Blood Pressure"/>
+							<effectiveTime value="20030922"/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="005" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Systolic Blood Pressure"/>
+									<value xsi:type="PQ" value="160" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="006" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Diastolic Blood Pressure"/>
+									<value xsi:type="PQ" value="110" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height"/>
+							<effectiveTime value="20040809"/>
+							<value xsi:type="PQ" value="172" unit="cm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Weight"/>
+							<effectiveTime value="20040809"/>
+							<value xsi:type="PQ" value="80" unit="kg"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="11328-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Pulse"/>
+							<effectiveTime value="20040809"/>
+							<value xsi:type="PQ" value="94" unit="bpm"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="004" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Blood Pressure"/>
+							<effectiveTime value="20040809"/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="005" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Systolic Blood Pressure"/>
+									<value xsi:type="PQ" value="160" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="006" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Data Element Code" displayName="Diastolic Blood Pressure"/>
+									<value xsi:type="PQ" value="130" unit="mm[Hg]"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Active Problem List
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Active Problem List"/>
+					<title>Active Problem List</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Active Problem</th>
+									<th>Description</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Hypertension </td>
+									<td>Continuing to increase in severity.</td>
+									<td>December 2002</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="401" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD-9" displayName="Hypertension"/>
+							<effectiveTime value="200212"/>
+							<value xsi:type="ST">This is continuing to increase in severity.</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Current Medications
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="19789-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Current Medications"/>
+					<title>Current Medications</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Medication Name</th>
+									<th>DIN</th>
+									<th>DIN Name</th>
+									<th>Dose</th>
+									<th>Quantity Ordered</th>
+									<th>Admin Route</th>
+									<th>Frequency</th>
+									<th>Repeats</th>
+									<th>Effective Date</th>
+								</tr>
+								<tr>
+									<td>Accupril 5 mg</td>
+									<td>01947664</td>
+									<td>Quinapril</td>
+									<td>10 mg</td>
+									<td>100</td>
+									<td>Orally</td>
+									<td>BID</td>
+									<td>2</td>
+									<td>Jan 15, 2003</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<text>100</text>
+							<effectiveTime value="20030115"/>
+							<repeatNumber value="2">
+								<low/>
+								<high/>
+							</repeatNumber>
+							<routeCode code="PO" codeSystem="2.16.840.1.113883.5.112" codeSystemName="RouteOfAdministration" displayName="per os"/>
+							<doseQuantity>
+								<center value="5" unit="mg"/>
+								<width unit="BID"/>
+							</doseQuantity>
+							<consumable>
+								<manufacturedProduct>
+									<manufacturedLabeledDrug>
+										<code code="01947664" codeSystem="36F030E1-180A-4c53-AEF6-7EEA32B531B3" codeSystemName="DIN" displayName="Quinapril"/>
+										<name>Accupril 5 mg.</name>
+									</manufacturedLabeledDrug>
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+Medical History
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="11348-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical History"/>
+					<title>Medical History</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Problem</th>
+									<th>Comments</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Meningitis</td>
+									<td>No permanent effects.</td>
+									<td>1975</td>
+								</tr>
+								<tr>
+									<td>Closed fractured rib</td>
+									<td>Patient is unsure of which rib it was.</td>
+									<td>1994</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="322.9" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD-9" displayName="meningitis"/>
+							<effectiveTime value="1975"/>
+							<value xsi:type="ST">No permanent effects.</value>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="807.01" codeSystem="2.16.840.1.113883.6.2" codeSystemName="ICD-9" displayName="closed fractured 										rib"/>
+							<effectiveTime value="1994"/>
+							<value xsi:type="ST">Patient is unsure of which rib it was.</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Surgical History
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="10167-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Surgical History"/>
+					<title>Surgical History</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Description</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Appendectomy</td>
+									<td>June 1970</td>
+								</tr>
+								<tr>
+									<td>Cholelithotomy</td>
+									<td>January 17, 2004</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<procedure classCode="PROC" moodCode="EVN">
+							<text>Appendectomy</text>
+							<effectiveTime value="197006"/>
+						</procedure>
+					</entry>
+					<entry typeCode="COMP">
+						<procedure classCode="PROC" moodCode="EVN">
+							<text>Cholelithotomy</text>
+							<effectiveTime value="20040117"/>
+						</procedure>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Medical Imaging History
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="35090-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical Imaging History"/>
+					<title>Medical Imaging History</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Procedure</th>
+									<th>Results</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Chest x-ray</td>
+									<td>Nothing unusual could be observed. X-ray image is attached.</td>
+									<td>July 14, 2004</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code nullFlavor="NA"/>
+							<text>Chest x-ray</text>
+							<effectiveTime value="20040714"/>
+							<value xsi:type="ST">Nothing unusual could be observed. X-ray image is attached.</value>
+							<entryRelationship typeCode="COMP">
+								<observationMedia classCode="DGIMG" moodCode="EVN">
+									<value mediaType="image/jpeg">
+										<reference value="test.jpg"/>
+									</value>
+								</observationMedia>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Other Treatments
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="007" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Document Section Codes" displayName="Other Treatments"/>
+					<title>Other Treatments</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Other Treatment</th>
+									<th>Outcome</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Herbal remedy</td>
+									<td>The patient did not experience any improvement in her condition</td>
+									<td>November 2003-February 2004</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code nullFlavor="NA"/>
+							<text>Herbal remedy</text>
+							<effectiveTime value="20031100000000.20040200000000"/>
+							<value xsi:type="ST">The patient did not experience any improvement in her condition.</value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Allergies
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="008" codeSystem="7BA9BFFD-D25F-44e8-A7B0-0DF214D6845B" codeSystemName="e-MS Document Section Codes" displayName="Allergies"/>
+					<title>Allergies</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Allergy Type</th>
+									<th>Severity</th>
+									<th>Comments</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Penicillin</td>
+									<td>Mild</td>
+									<td>Penicillin. Resulting in hives. Patient hasn’t been tested recently to see if this is still an active allergy</td>
+									<td>1965</td>
+								</tr>
+								<tr>
+									<td>Dairy products</td>
+									<td>Moderate</td>
+									<td>Dairy. Resulting in puffy eyes</td>
+									<td>1970-1985</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DA" codeSystem="2A9DDF65-2465-4cf7-903C-832A33B22F5D" codeSystemName="AllergyType" displayName="Drug Allergy"/>
+							<effectiveTime value="19650516"/>
+							<value xsi:type="ST">Penicillin. Resulting in hives. Patient hasn’t been tested recently to see if this is still an active allergy</value>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="MI" codeSystem="2.16.840.1.113883.12.128" codeSystemName="AllergySeverity" displayName="Mild"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="FA" codeSystem="2A9DDF65-2465-4cf7-903C-832A33B22F5D" codeSystemName="AllergyType" displayName="Food Allergy"/>
+							<effectiveTime value="19700000000000.19850000000000"/>
+							<value xsi:type="ST">Dairy. Resulting in puffy eyes</value>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="MO" codeSystem="2.16.840.1.113883.12.128" codeSystemName="AllergySeverity" displayName="Moderate"/>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Immunization
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Immunization"/>
+					<title>Immunization</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Immunization</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Hepatitis A </td>
+									<td>September 24, 2000</td>
+								</tr>
+								<tr>
+									<td>Hepatitis A</td>
+									<td>January 27, 2002</td>
+								</tr>
+								<tr>
+									<td>Inactivated Polio Vaccine (study)</td>
+									<td>March 13, 1985</td>
+								</tr>
+								<tr>
+									<td>Measles Mumps Rubella</td>
+									<td>April 30, 1995</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="HA" codeSystem="FC1AFD51-7DC6-404c-9B06-C3234B850B65" codeSystemName="BCCDC - ImmunizationCode" displayName="Hepatitis A"/>
+							<effectiveTime value="20000924"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="HA" codeSystem="FC1AFD51-7DC6-404c-9B06-C3234B850B65" codeSystemName="BCCDC - ImmunizationCode" displayName="Hepatitis A"/>
+							<effectiveTime value="20020127"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="IPV-study" codeSystem="FC1AFD51-7DC6-404c-9B06-C3234B850B65" codeSystemName="BCCDC - ImmunizationCode" displayName="Inactivated Polio Vaccine (study)"/>
+							<effectiveTime value="19850313"/>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="MMR" codeSystem="FC1AFD51-7DC6-404c-9B06-C3234B850B65" codeSystemName="BCCDC - ImmunizationCode" displayName="Measles Mumps Rubella"/>
+							<effectiveTime value="19950430"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Labs
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="11502-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Labs"/>
+					<title>Labs</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Type</th>
+									<th>Collection Date</th>
+									<th>Result/Unit</th>
+									<th>Normal Result Range</th>
+									<th>Abnormal?</th>
+								</tr>
+								<tr>
+									<td>troponin I (TnI)</td>
+									<td>February 26, 2004</td>
+									<td>0.5 ng/mL</td>
+									<td>less than 0.5 ng/mL</td>
+									<td>No</td>
+								</tr>
+								<tr>
+									<td>creatine phosphokinase (CPK)</td>
+									<td>February 26, 2004</td>
+									<td>180 u/L</td>
+									<td>5-200 u/L</td>
+									<td>No</td>
+								</tr>
+								<tr>
+									<td>lactate dehydrogenase (LDH)</td>
+									<td>February 26, 2004</td>
+									<td>400 u/L</td>
+									<td>200-650 u/L</td>
+									<td>No</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="Tnl" displayName="troponin I"/>
+							<effectiveTime value="20040226"/>
+							<value xsi:type="PQ" value="0.5" unit="ng/mL"/>
+							<interpretationCode code="N" displayName="Normal"/>
+							<referenceRange>
+								<referenceObservationRange>
+									<value xsi:type="IVL_PQ">
+										<high value="0.5" unit="ng/mL" inclusive="false"/>
+									</value>
+								</referenceObservationRange>
+							</referenceRange>
+							<performer>
+								<assignedEntity>
+									<id displayable="true" root="476CAE01-D4E8-4894-A007-EF55064175D0" assigningAuthorityName="MSP" extension="B0219 MDS METRO, ISLAND DIVISION - SCS"/>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="CPK" displayName="creatine phosphokinase"/>
+							<effectiveTime value="20040226"/>
+							<value xsi:type="PQ" value="180" unit="u/L"/>
+							<interpretationCode code="N" displayName="Normal"/>
+							<referenceRange>
+								<referenceObservationRange>
+									<value xsi:type="ST">5-200 u/L</value>
+								</referenceObservationRange>
+							</referenceRange>
+							<performer>
+								<assignedEntity>
+									<id displayable="true" root="476CAE01-D4E8-4894-A007-EF55064175D0" assigningAuthorityName="MSP" extension="B0219 MDS METRO, ISLAND DIVISION - SCS"/>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+					<entry typeCode="COMP">
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="LDH" displayName="lactate dehydrogenase"/>
+							<effectiveTime value="20040226"/>
+							<value xsi:type="PQ" value="400" unit="u/L"/>
+							<interpretationCode code="N" displayName="Normal"/>
+							<referenceRange>
+								<referenceObservationRange>
+									<value xsi:type="IVL_PQ">
+										<low value="200" unit="u/L" inclusive="true"/>
+										<high value="650" unit="u/L" inclusive="true"/>
+									</value>
+								</referenceObservationRange>
+							</referenceRange>
+							<performer>
+								<assignedEntity>
+									<id displayable="true" root="476CAE01-D4E8-4894-A007-EF55064175D0" assigningAuthorityName="MSP" extension="B0219 MDS METRO, ISLAND DIVISION - SCS"/>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Past Referrals and Hospitalizations
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="11336-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Past Referrals and Hospitalizations"/>
+					<title>Past Referrals and Hospitalizations</title>
+					<text>
+						<table border="1">
+							<tbody>
+								<tr>
+									<th>Location/Person</th>
+									<th>Type</th>
+									<th>Reason</th>
+									<th>Date</th>
+								</tr>
+								<tr>
+									<td>Good Health Hospital</td>
+									<td>Specialist</td>
+									<td>Pneumonia</td>
+									<td>1996</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="COMP">
+						<encounter classCode="ENC" moodCode="EVN">
+							<id extension="Good Health Hospital"/>
+							<code code="SP" codeSystem="4FE1CC50-FBDC-44a6-A005-A49E9F7A6DA9" codeSystemName="HL7 - Act Encounter Code" displayName="Specialist"/>
+							<text>Pneumonia.</text>
+							<effectiveTime value="1996"/>
+						</encounter>
+					</entry>
+				</section>
+			</component>
+			<!-- 
+********************************************************
+Family History
+********************************************************
+-->
+			<component>
+				<section>
+					<code code="10157-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Family History"/>
+					<title>Family History</title>
+					<text>The patient’s father died of a myocardial infarction at the age of 65.</text>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

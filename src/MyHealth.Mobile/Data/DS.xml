@@ -1,0 +1,2064 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns:nehtaCDA="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns="urn:hl7-org:v3"
+                  xsi:schemaLocation="urn:xml-gov-au:nehta /nehta/xsl/library/schema/CDA/infrastructure/cda/CDA-eDS-V1_1.xsd">
+   <typeId extension="POCD_HD00040" root="2.16.840.1.113883.1.3"/>
+   <templateId root="1.2.36.1.2001.1001.101.20000" extension="3"/>
+   <id root="54da888a-99eb-4ff7-a4cd-f5840fe93f44" extension="4356" displayable="true"/>
+   <code code="18842-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+         displayName="Discharge Summarization Note"/>
+   <effectiveTime value="201011161009"/>
+   <confidentialityCode code="10230" codeSystem="2.16.840.1.113883.5.25" codeSystemName="HL7"
+                        displayName="active"/>
+   <languageCode code="en-AU"/>
+   <setId root="8e8d75f4-d480-4105-9049-867d6100f51e" extension="4000" displayable="true"/>
+   <versionNumber value="1"/>
+   <completionCode xmlns="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1" code="15942"
+                   codeSystem="2.16.840.1.113883.5.14"
+                   codeSystemName="HL7"
+                   displayName="active"/>
+   <recordTarget typeCode="RCT">
+      <patientRole>
+         <id nullFlavor="NA"/>
+         <addr use="H">
+            <streetAddressLine>10 Browning Street</streetAddressLine>
+            <city>West End</city>
+            <state>QLD</state>
+            <postalCode>4101</postalCode>
+         </addr>
+         <telecom value="tel:0730238400" use="WP"/>
+         <patient>
+            <name use="L">
+               <prefix>Mr</prefix>
+               <family>Citizen</family>
+               <given>Fred</given>
+            </name>
+            <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.13.68"
+                                      codeSystemName="AS 5017-2006 Health Care Client Identifier Sex"
+                                      displayName="M"/>
+            <birthTime value="19800101"/>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003609876543210" extension="ihi"/>
+            </nehtaCDA:asEntityIdentifier>
+         </patient>
+      </patientRole>
+   </recordTarget>
+   <author typeCode="AUT">
+      <time nullFlavor="NA"/>
+      <assignedAuthor classCode="ASSIGNED">
+         <id root="af77a17b-357c-46db-b51b-8352bebeb016" displayable="true"/>
+         <assignedAuthoringDevice classCode="DEV" determinerCode="INSTANCE"/>
+      </assignedAuthor>
+   </author>
+   <author typeCode="AUT">
+      <time nullFlavor="NA"/>
+      <assignedAuthor>
+         <id nullFlavor="NA"/>
+         <code code="253112" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="Medical Intern"/>
+         <addr use="WP">
+            <streetAddressLine>1 Stanley Street</streetAddressLine>
+            <city>Ringwood East</city>
+            <state>VIC</state>
+            <postalCode>3136</postalCode>
+         </addr>
+         <telecom value="tel:03 3256 8569" use="WP"/>
+         <assignedPerson>
+            <name use="L">
+               <prefix>Dr</prefix>
+               <family>Lee</family>
+               <given>Jason</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002084" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </assignedPerson>
+         <representedOrganization>
+            <name>Fairhill Health Hospital</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003630000000822" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </representedOrganization>
+      </assignedAuthor>
+   </author>
+   <custodian>
+      <assignedCustodian>
+         <representedCustodianOrganization>
+            <id nullFlavor="NA"/>
+            <name>Bay Hill Hospital</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000020052"/>
+            </nehtaCDA:asEntityIdentifier>
+         </representedCustodianOrganization>
+      </assignedCustodian>
+   </custodian>
+   <informationRecipient typeCode="PRCP">
+      <intendedRecipient classCode="ASSIGNED">
+         <id nullFlavor="NA"/>
+         <code xmlns="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1" code="253111"
+               codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="General Practitioner"/>
+         <addr use="WP">
+            <streetAddressLine>23 Anzac Street</streetAddressLine>
+            <city>Croydon</city>
+            <state>VIC</state>
+            <postalCode>3136</postalCode>
+         </addr>
+         <telecom value="tel:03 4575 4566" use="WP"/>
+         <informationRecipient classCode="PSN" determinerCode="INSTANCE">
+            <name use="L">
+               <prefix>Dr</prefix>
+               <family>Anderson</family>
+               <given>Jane</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000001706" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </informationRecipient>
+         <receivedOrganization>
+            <name>Croydon GP Centre</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003630000000541" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </receivedOrganization>
+      </intendedRecipient>
+   </informationRecipient>
+   <informationRecipient typeCode="TRC">
+      <intendedRecipient classCode="ASSIGNED">
+         <id nullFlavor="NA"/>
+         <code xmlns="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1" code="253999"
+               codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="Patient"/>
+         <addr use="H">
+            <streetAddressLine>10 Browning Street</streetAddressLine>
+            <city>West End</city>
+            <state>QLD</state>
+            <postalCode>4101</postalCode>
+         </addr>
+         <telecom value="tel:0730238400" use="WP"/>
+         <informationRecipient classCode="PSN" determinerCode="INSTANCE">
+            <name use="L">
+               <prefix>Mr</prefix>
+               <family>Citizen</family>
+               <given>Fred</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003609876543210" extension="ihi"/>
+            </nehtaCDA:asEntityIdentifier>
+         </informationRecipient>
+      </intendedRecipient>
+   </informationRecipient>
+   <informationRecipient typeCode="TRC">
+      <intendedRecipient classCode="ASSIGNED">
+         <id nullFlavor="NA"/>
+         <code xmlns="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1" code="252511"
+               codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="Physiotherapist"/>
+         <addr use="WP">
+            <streetAddressLine>200 Wonga Road</streetAddressLine>
+            <city>Warranwood</city>
+            <state>VIC</state>
+            <postalCode>3101</postalCode>
+         </addr>
+         <telecom value="tel:02 5214 5236" use="WP"/>
+         <informationRecipient classCode="PSN" determinerCode="INSTANCE">
+            <name use="L">
+               <prefix>Mr</prefix>
+               <family>Owen</family>
+               <given>Peter</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002076" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </informationRecipient>
+         <receivedOrganization>
+            <name>PhysioCare Pty Ltd</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003630000000814" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </receivedOrganization>
+      </intendedRecipient>
+   </informationRecipient>
+   <legalAuthenticator typeCode="LA">
+      <time value="20101116"/>
+      <signatureCode code="S"/>
+      <assignedEntity>
+         <id nullFlavor="NA"/>
+         <code code="253112" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="Medical Intern"/>
+         <addr use="WP">
+            <streetAddressLine>1 Stanley Street</streetAddressLine>
+            <city>Ringwood East</city>
+            <state>VIC</state>
+            <postalCode>3136</postalCode>
+         </addr>
+         <telecom value="tel:03 3256 8569" use="WP"/>
+         <assignedPerson>
+            <name use="L">
+               <prefix>Dr</prefix>
+               <family>Lee</family>
+               <given>Jason</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002084" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </assignedPerson>
+         <representedOrganization>
+            <name>Fairhill Health Hospital</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003630000000822" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </representedOrganization>
+      </assignedEntity>
+   </legalAuthenticator>
+   <participant typeCode="PART">
+      <functionCode code="PCP"/>
+      <associatedEntity classCode="PROV">
+         <code code="253111" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="General Practitioner"/>
+         <addr use="WP">
+            <streetAddressLine>23 Anzac Street</streetAddressLine>
+            <city>Croydon</city>
+            <state>VIC</state>
+            <postalCode>3136</postalCode>
+         </addr>
+         <telecom value="tel:03 4575 4566" use="WP"/>
+         <associatedPerson>
+            <name use="L">
+               <prefix>Dr</prefix>
+               <family>Anderson</family>
+               <given>Jane</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000001706" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </associatedPerson>
+         <scopingOrganization>
+            <name>Croydon GP Centre</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003630000000541" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </scopingOrganization>
+      </associatedEntity>
+   </participant>
+   <participant typeCode="ORG">
+      <associatedEntity classCode="SDLOC">
+         <code>
+            <originalText>3A</originalText>
+         </code>
+      </associatedEntity>
+   </participant>
+   <participant typeCode="PART">
+      <associatedEntity classCode="CAREGIVER">
+         <code code="252511" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="Physiotherapist"/>
+         <addr use="WP">
+            <streetAddressLine>19 High Street</streetAddressLine>
+            <city>Melbourne</city>
+            <state>VIC</state>
+            <postalCode>3000</postalCode>
+         </addr>
+         <telecom value="tel:03 9999 9999" use="WP"/>
+         <associatedPerson>
+            <name use="L">
+               <prefix>Miss</prefix>
+               <family>Jones</family>
+               <given>Kathryn</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002019" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </associatedPerson>
+         <scopingOrganization>
+            <name>Bay Hill Hospital</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000020052" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </scopingOrganization>
+      </associatedEntity>
+   </participant>
+   <participant typeCode="PART">
+      <associatedEntity classCode="CAREGIVER">
+         <code code="251511" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="Pharmacist"/>
+         <addr use="WP">
+            <streetAddressLine>19 High Street</streetAddressLine>
+            <city>Melbourne</city>
+            <state>VIC</state>
+            <postalCode>3000</postalCode>
+         </addr>
+         <telecom value="tel:03 9999 9999" use="WP"/>
+         <associatedPerson>
+            <name use="L">
+               <prefix>Mr</prefix>
+               <family>Thomas</family>
+               <given>Charles</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002001" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </associatedPerson>
+         <scopingOrganization>
+            <name>Bay Hill Hospital</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000020052" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </scopingOrganization>
+      </associatedEntity>
+   </participant>
+   <participant typeCode="PART">
+      <associatedEntity classCode="CAREGIVER">
+         <code code="253999" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+               displayName="Registrar"/>
+         <addr use="WP">
+            <streetAddressLine>19 High Street</streetAddressLine>
+            <city>Melbourne</city>
+            <state>VIC</state>
+            <postalCode>3000</postalCode>
+         </addr>
+         <telecom value="tel:03 9999 9999" use="WP"/>
+         <associatedPerson>
+            <name use="L">
+               <prefix>Dr</prefix>
+               <family>Smith</family>
+               <given>Janice</given>
+            </name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000001995" extension="hpii"/>
+            </nehtaCDA:asEntityIdentifier>
+         </associatedPerson>
+         <scopingOrganization>
+            <name>Bay Hill Hospital</name>
+            <nehtaCDA:asEntityIdentifier classCode="IDENT">
+               <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000020052" extension="hpio"/>
+            </nehtaCDA:asEntityIdentifier>
+         </scopingOrganization>
+      </associatedEntity>
+   </participant>
+   <componentOf typeCode="COMP">
+      <encompassingEncounter classCode="ENC" moodCode="EVN">
+         <effectiveTime>
+            <low value="201011091044"/>
+            <high value="201011160959"/>
+         </effectiveTime>
+         <dischargeDispositionCode code="55223362" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                   displayName="To home"/>
+         <encounterParticipant typeCode="DIS">
+            <assignedEntity classCode="ASSIGNED">
+               <id nullFlavor="NA"/>
+               <code code="253311" codeSystem="2.16.840.1.113883.13.62"
+                     codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                     displayName="Consultant"/>
+               <addr use="WP">
+                  <streetAddressLine>19 High Street</streetAddressLine>
+                  <city>Melbourne</city>
+                  <state>VIC</state>
+                  <postalCode>3000</postalCode>
+               </addr>
+               <telecom value="tel:03 9999 9999" use="WP"/>
+               <assignedPerson>
+                  <name use="L">
+                     <prefix>Mr</prefix>
+                     <family>McAllistar</family>
+                     <given>Jeremy</given>
+                  </name>
+                  <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                     <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000001987" extension="hpii"/>
+                  </nehtaCDA:asEntityIdentifier>
+               </assignedPerson>
+               <representedOrganization>
+                  <name>Bay Hill Hospital</name>
+                  <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                     <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000020052" extension="hpio"/>
+                  </nehtaCDA:asEntityIdentifier>
+               </representedOrganization>
+            </assignedEntity>
+         </encounterParticipant>
+         <location typeCode="LOC">
+            <healthCareFacility classCode="SDLOC">
+               <code code="HOSP" codeSystem="2.16.840.1.113883.1.11.17660"
+                     codeSystemName="HL7 ServiceDeliveryLocationRoleType"
+                     displayName="Hospital"/>
+               <serviceProviderOrganization classCode="ORG" determinerCode="INSTANCE">
+                  <name use="L"/>
+                  <asOrganizationPartOf classCode="PART">
+                     <id nullFlavor="NA"/>
+                     <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                        <name use="L">Bay Hill Hospital</name>
+                        <telecom value="tel:03 9999 9999" use="WP"/>
+                        <addr use="WP">
+                           <streetAddressLine>19 High Street</streetAddressLine>
+                           <city>Melbourne</city>
+                           <state>VIC</state>
+                           <postalCode>3000</postalCode>
+                        </addr>
+                        <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                           <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000020052" extension="hpio"/>
+                        </nehtaCDA:asEntityIdentifier>
+                     </wholeOrganization>
+                  </asOrganizationPartOf>
+               </serviceProviderOrganization>
+            </healthCareFacility>
+         </location>
+      </encompassingEncounter>
+   </componentOf>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <code code="102.16080.4.1.1" displayName="Administrative Observations"
+                     codeSystem="1.2.36.1.2001.1001.101"
+                     codeSystemName="NCTIS Data Components"/>
+               <title>Administrative Observations</title>
+               <text>
+                  <list styleCode="xNEHTADemographicData">
+                     <caption>Demographic Data</caption>
+                  </list>
+                  <list listType="ordered">
+                     <caption>Specialties</caption>
+                     <item>Respiratory</item>
+                     <item>Orthopaedic Surgery</item>
+                  </list>
+               </text>
+               <component>
+                  <section>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e302"/>
+                           <code code="103.16028.4.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                 codeSystemName="NCTIS Data Components"
+                                 displayName="Specialty"/>
+                           <value xsi:type="CD" code="112239003" codeSystem="2.16.840.1.113883.6.96"
+                                  codeSystemName="SNOMED-CT"
+                                  displayName="Respiratory"/>
+                           <value xsi:type="CD" code="257556004" codeSystem="2.16.840.1.113883.6.96"
+                                  codeSystemName="SNOMED-CT"
+                                  displayName="Orthopaedic Surgery"/>
+                        </observation>
+                     </entry>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <code code="101.16006.4.1.1" displayName="Event" codeSystem="1.2.36.1.2001.1001.101"
+                     codeSystemName="NCTIS Data Components"/>
+               <title>Event</title>
+               <component>
+                  <section>
+                     <code code="101.20104.4.1.1" displayName="Problems/Diagnoses This Visit"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Problems/Diagnoses This Visit</title>
+                     <text>
+                        <list styleCode="xNEHTAProblemsDiagnosesThisVisit">
+                           <caption>Problems/Diagnoses This Visit</caption>
+                           <item styleCode="xNEHTAProblemDiagnosis">
+                              <caption>Problem/Diagnosis</caption>
+                              <list>
+                                 <item>
+                                    <caption>Problem/Diagnosis Type</caption>Comorbidities</item>
+                                 <item>
+                                    <caption>Problem/Diagnosis Description</caption>Chronic Obstructive Airways Disease</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAProblemDiagnosis">
+                              <caption>Problem/Diagnosis</caption>
+                              <list>
+                                 <item>
+                                    <caption>Problem/Diagnosis Type</caption>Comorbidities</item>
+                                 <item>
+                                    <caption>Problem/Diagnosis Description</caption>Anaemia</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAProblemDiagnosis">
+                              <caption>Problem/Diagnosis</caption>
+                              <list>
+                                 <item>
+                                    <caption>Problem/Diagnosis Type</caption>Complications</item>
+                                 <item>
+                                    <caption>Problem/Diagnosis Description</caption>Post-operative pneumonia</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAProblemDiagnosis">
+                              <caption>Problem/Diagnosis</caption>
+                              <list>
+                                 <item>
+                                    <caption>Problem/Diagnosis Type</caption>Complications</item>
+                                 <item>
+                                    <caption>Problem/Diagnosis Description</caption>Intra operative haemorrhage</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAProblemDiagnosis">
+                              <caption>Problem/Diagnosis</caption>
+                              <list>
+                                 <item>
+                                    <caption>Problem/Diagnosis Type</caption>Complications</item>
+                                 <item>
+                                    <caption>Problem/Diagnosis Description</caption>Hypotension</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAProblemDiagnosis">
+                              <caption>Problem/Diagnosis</caption>
+                              <list>
+                                 <item>
+                                    <caption>Problem/Diagnosis Type</caption>Principal Diagnosis</item>
+                                 <item>
+                                    <caption>Problem/Diagnosis Description</caption>Osteoarthritis of right knee</item>
+                              </list>
+                           </item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e493"/>
+                           <code code="398192003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Comorbidities"/>
+                           <value xsi:type="ED">Chronic Obstructive Airways Disease</value>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e498"/>
+                           <code code="398192003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Comorbidities"/>
+                           <value xsi:type="ED">Anaemia</value>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e503"/>
+                           <code code="116223007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Complications"/>
+                           <value xsi:type="ED">Post-operative pneumonia</value>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e508"/>
+                           <code code="116223007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Complications"/>
+                           <value xsi:type="ED">Intra operative haemorrhage</value>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e513"/>
+                           <code code="116223007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Complications"/>
+                           <value xsi:type="ED">Hypotension</value>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e518"/>
+                           <code code="8319008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Principal Diagnosis"/>
+                           <value xsi:type="ED">Osteoarthritis of right knee</value>
+                        </observation>
+                     </entry>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <code code="101.20109.4.1.1"
+                           displayName="Clinical Interventions Performed This Visit"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Clinical Interventions Performed This Visit</title>
+                     <text>
+                        <list styleCode="xNEHTAClinicalInterventionsPerformedThisVisit">
+                           <caption>Clinical Interventions Performed This Visit</caption>
+                           <item styleCode="xNEHTAClinicalIntervention">
+                              <caption>Clinical Intervention</caption>
+                              <list>
+                                 <item>
+                                    <caption>Clinical Intervention Description</caption>Primary cemented Total Knee Replacement (R)</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAClinicalIntervention">
+                              <caption>Clinical Intervention</caption>
+                              <list>
+                                 <item>
+                                    <caption>Clinical Intervention Description</caption>Lumbar epidural block</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAClinicalIntervention">
+                              <caption>Clinical Intervention</caption>
+                              <list>
+                                 <item>
+                                    <caption>Clinical Intervention Description</caption>Transfusion of packed red blood cells, post-op</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAClinicalIntervention">
+                              <caption>Clinical Intervention</caption>
+                              <list>
+                                 <item>
+                                    <caption>Clinical Intervention Description</caption>Physiotherapy</item>
+                              </list>
+                           </item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <procedure classCode="PROC" moodCode="EVN">
+                           <id root="d0e524"/>
+                           <code code="179344006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Primary cemented Total Knee Replacement (R)"/>
+                        </procedure>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <procedure classCode="PROC" moodCode="EVN">
+                           <id root="d0e527"/>
+                           <code code="180885006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Lumbar epidural block"/>
+                        </procedure>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <procedure classCode="PROC" moodCode="EVN">
+                           <id root="d0e530"/>
+                           <code code="71493000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Transfusion of packed red blood cells, post-op"/>
+                        </procedure>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <procedure classCode="PROC" moodCode="EVN">
+                           <id root="d0e533"/>
+                           <code code="91251008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Physiotherapy"/>
+                        </procedure>
+                     </entry>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <code code="102.15513.4.1.1" displayName="Clinical Synopsis"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Clinical Synopsis</title>
+                     <text>
+                        <paragraph styleCode="xNEHTAClinicalSynopsis">
+                           <caption>Clinical Synopsis</caption>Admitted for elective, right Total Knee Replacement (cemented prosthesis). Day 3, developed bilateral basal atelectasis. The FBC showed high WCC (20.0) and high neutrophils (16.0). Commenced on doxycycline and chest physio. Due to mild anaemia prior to surgery and subsequent operative blood loss, required a blood transfusion of three units. Subsequently made steady progress, regaining good mobility in his knee and is able to mobilise with the aid of a stick. Right knee Xray showed no fracture or dislocation, with the total knee prosthesis well positioned post surgery.</paragraph>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="EVN">
+                           <id root="d0e536"/>
+                           <code code="170967006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Prognosis/outlook"/>
+                           <text>Admitted for elective, right Total Knee Replacement (cemented prosthesis). Day 3, developed bilateral basal atelectasis. The FBC showed high WCC (20.0) and high neutrophils (16.0). Commenced on doxycycline and chest physio. Due to mild anaemia prior to surgery and subsequent operative blood loss, required a blood transfusion of three units. Subsequently made steady progress, regaining good mobility in his knee and is able to mobilise with the aid of a stick. Right knee Xray showed no fracture or dislocation, with the total knee prosthesis well positioned post surgery.</text>
+                        </act>
+                     </entry>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <code code="101.16022.4.1.1" codeSystem="1.2.36.1.2001.1001"
+                     displayName="Medications"
+                     codeSystemName="NCTIS Data Components"/>
+               <title>Medications</title>
+               <component>
+                  <section>
+                     <code code="102.16026.4.1.1" codeSystem="1.2.36.1.2001.1001"
+                           displayName="Current Medications On Discharge"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Current Medications On Discharge</title>
+                     <text>
+                        <list styleCode="xNEHTAItemDetail">
+                           <caption>Item Detail</caption>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Item Status</caption>New</item>
+                           <item>
+                              <caption>Item Description</caption>Doxycycline (100mg) tablet</item>
+                           <item styleCode="xNEHTAduration">
+                              <caption>Medication Duration</caption> Continue until finished</item>
+                           <item>
+                              <caption>Reason For Medication</caption>Pneumonia</item>
+                           <item>
+                              <caption>Quantity Of Medication</caption>2 tablets</item>
+                           <item>
+                              <caption>Dose Instruction</caption>1 tablet once daily oral</item>
+                           <item styleCode="xNEHTAParticipation xNEHTAMedicationItemAuthoriser">
+                              <list>
+                                 <caption>Item Authoriser</caption>
+                                 <item styleCode="xNEHTAcodeableText">
+                                    <caption>Healthcare Role</caption>Pharmacist</item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003630000000822</item>
+                                       <item>
+                                          <caption>Extension</caption>hpio</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>Name</caption>Fairhill Health Hospital</item>
+                                 <item styleCode="xNEHTAAddress">
+                                    <list>
+                                       <caption>Address</caption>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Purpose</caption>
+                                       </item>
+                                       <item>1 Stanley Street</item>
+                                       <item>
+                                          <caption>Locality</caption>Ringwood East</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>State/Territory</caption>VIC</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Postcode</caption>
+                                       </item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAElectronicCommunicationDetail">
+                                    <list>
+                                       <caption>Electronic Communication Detail</caption>
+                                       <item>
+                                          <caption>tel</caption>03 3256 8569</item>
+                                       <item>
+                                          <caption>Usage</caption>WP</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003620000002027</item>
+                                       <item>
+                                          <caption>Extension</caption>hpii</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAPerson xNEHTAAssignedPerson">
+                                    <list>
+                                       <caption>Assigned Person</caption>
+                                       <item styleCode="xNEHTAPersonName">
+                                          <list>
+                                             <caption>Person Name</caption>
+                                             <item>
+                                                <caption>Usage</caption>Legal name</item>
+                                             <item styleCode="xNEHTAcodeableText">
+                                                <caption>Name Title</caption>Mrs</item>
+                                             <item>
+                                                <caption>Family Name</caption>Grant</item>
+                                             <item>
+                                                <caption>Given Name</caption>Susan</item>
+                                          </list>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                           <item>
+                              <caption>Additional Comments</caption>
+                           </item>
+                        </list>
+                        <list styleCode="xNEHTAItemDetail">
+                           <caption>Item Detail</caption>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Item Status</caption>New</item>
+                           <item>
+                              <caption>Item Description</caption>Codalgin Forte (paracetamol 500mg + codeine phosphate 30mg) tablet</item>
+                           <item styleCode="xNEHTAduration">
+                              <caption>Medication Duration</caption> Ongoing</item>
+                           <item>
+                              <caption>Reason For Medication</caption>Pain management</item>
+                           <item>
+                              <caption>Quantity Of Medication</caption>20 tablets</item>
+                           <item>
+                              <caption>Dose Instruction</caption>1-2 tablets as required oral. Max 8 per day</item>
+                           <item styleCode="xNEHTAParticipation xNEHTAMedicationItemAuthoriser">
+                              <list>
+                                 <caption>Item Authoriser</caption>
+                                 <item styleCode="xNEHTAcodeableText">
+                                    <caption>Healthcare Role</caption>Pharmacist</item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003630000000822</item>
+                                       <item>
+                                          <caption>Extension</caption>hpio</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>Name</caption>Fairhill Health Hospital</item>
+                                 <item styleCode="xNEHTAAddress">
+                                    <list>
+                                       <caption>Address</caption>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Purpose</caption>
+                                       </item>
+                                       <item>1 Stanley Street</item>
+                                       <item>
+                                          <caption>Locality</caption>Ringwood East</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>State/Territory</caption>VIC</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Postcode</caption>
+                                       </item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAElectronicCommunicationDetail">
+                                    <list>
+                                       <caption>Electronic Communication Detail</caption>
+                                       <item>
+                                          <caption>tel</caption>03 3256 8569</item>
+                                       <item>
+                                          <caption>Usage</caption>WP</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003620000002027</item>
+                                       <item>
+                                          <caption>Extension</caption>hpii</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAPerson xNEHTAAssignedPerson">
+                                    <list>
+                                       <caption>Assigned Person</caption>
+                                       <item styleCode="xNEHTAPersonName">
+                                          <list>
+                                             <caption>Person Name</caption>
+                                             <item>
+                                                <caption>Usage</caption>Legal name</item>
+                                             <item styleCode="xNEHTAcodeableText">
+                                                <caption>Name Title</caption>Mrs</item>
+                                             <item>
+                                                <caption>Family Name</caption>Grant</item>
+                                             <item>
+                                                <caption>Given Name</caption>Susan</item>
+                                          </list>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                           <item>
+                              <caption>Additional Comments</caption>
+                           </item>
+                        </list>
+                        <list styleCode="xNEHTAItemDetail">
+                           <caption>Item Detail</caption>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Item Status</caption>Altered</item>
+                           <item>
+                              <caption>Item Description</caption>Lasix (frusemide 40 mg) tablet</item>
+                           <item styleCode="xNEHTAduration">
+                              <caption>Medication Duration</caption> Ongoing</item>
+                           <item>
+                              <caption>Reason For Medication</caption>Fluid retention</item>
+                           <item>
+                              <caption>Quantity Of Medication</caption>100 tablets</item>
+                           <item>
+                              <caption>Dose Instruction</caption>1 tablet once daily oral</item>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Changes Made</caption>Dose decreased from 1 tablet Twice a day</item>
+                           <item>
+                              <caption>Reason For Change</caption>Due to hypotension</item>
+                           <item styleCode="xNEHTAParticipation xNEHTAMedicationItemAuthoriser">
+                              <list>
+                                 <caption>Item Authoriser</caption>
+                                 <item styleCode="xNEHTAcodeableText">
+                                    <caption>Healthcare Role</caption>Pharmacist</item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003630000000822</item>
+                                       <item>
+                                          <caption>Extension</caption>hpio</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>Name</caption>Fairhill Health Hospital</item>
+                                 <item styleCode="xNEHTAAddress">
+                                    <list>
+                                       <caption>Address</caption>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Purpose</caption>
+                                       </item>
+                                       <item>1 Stanley Street</item>
+                                       <item>
+                                          <caption>Locality</caption>Ringwood East</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>State/Territory</caption>VIC</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Postcode</caption>
+                                       </item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAElectronicCommunicationDetail">
+                                    <list>
+                                       <caption>Electronic Communication Detail</caption>
+                                       <item>
+                                          <caption>tel</caption>03 3256 8569</item>
+                                       <item>
+                                          <caption>Usage</caption>WP</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003620000002027</item>
+                                       <item>
+                                          <caption>Extension</caption>hpii</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAPerson xNEHTAAssignedPerson">
+                                    <list>
+                                       <caption>Assigned Person</caption>
+                                       <item styleCode="xNEHTAPersonName">
+                                          <list>
+                                             <caption>Person Name</caption>
+                                             <item>
+                                                <caption>Usage</caption>Legal name</item>
+                                             <item styleCode="xNEHTAcodeableText">
+                                                <caption>Name Title</caption>Mrs</item>
+                                             <item>
+                                                <caption>Family Name</caption>Grant</item>
+                                             <item>
+                                                <caption>Given Name</caption>Susan</item>
+                                          </list>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                           <item>
+                              <caption>Additional Comments</caption>
+                           </item>
+                        </list>
+                        <list styleCode="xNEHTAItemDetail">
+                           <caption>Item Detail</caption>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Item Status</caption>Withheld</item>
+                           <item>
+                              <caption>Item Description</caption>Cardiprin (aspirin 100mg) tablet</item>
+                           <item styleCode="xNEHTAduration">
+                              <caption>Medication Duration</caption> Ongoing</item>
+                           <item>
+                              <caption>Reason For Medication</caption>Cardiovascular prophylaxis</item>
+                           <item>
+                              <caption>Quantity Of Medication</caption>30 tablets</item>
+                           <item>
+                              <caption>Dose Instruction</caption>1 tablet once daily oral</item>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Changes Made</caption>Withheld</item>
+                           <item>
+                              <caption>Reason For Change</caption>Due to surgery</item>
+                           <item styleCode="xNEHTAParticipation xNEHTAMedicationItemAuthoriser">
+                              <list>
+                                 <caption>Item Authoriser</caption>
+                                 <item styleCode="xNEHTAcodeableText">
+                                    <caption>Healthcare Role</caption>Pharmacist</item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003630000000822</item>
+                                       <item>
+                                          <caption>Extension</caption>hpio</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>Name</caption>Fairhill Health Hospital</item>
+                                 <item styleCode="xNEHTAAddress">
+                                    <list>
+                                       <caption>Address</caption>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Purpose</caption>
+                                       </item>
+                                       <item>1 Stanley Street</item>
+                                       <item>
+                                          <caption>Locality</caption>Ringwood East</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>State/Territory</caption>VIC</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Postcode</caption>
+                                       </item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAElectronicCommunicationDetail">
+                                    <list>
+                                       <caption>Electronic Communication Detail</caption>
+                                       <item>
+                                          <caption>tel</caption>03 3256 8569</item>
+                                       <item>
+                                          <caption>Usage</caption>WP</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003620000002035</item>
+                                       <item>
+                                          <caption>Extension</caption>hpii</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAPerson xNEHTAAssignedPerson">
+                                    <list>
+                                       <caption>Assigned Person</caption>
+                                       <item styleCode="xNEHTAPersonName">
+                                          <list>
+                                             <caption>Person Name</caption>
+                                             <item>
+                                                <caption>Usage</caption>Legal name</item>
+                                             <item styleCode="xNEHTAcodeableText">
+                                                <caption>Name Title</caption>Mr</item>
+                                             <item>
+                                                <caption>Family Name</caption>Thompson</item>
+                                             <item>
+                                                <caption>Given Name</caption>Paul</item>
+                                          </list>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                           <item>
+                              <caption>Additional Comments</caption>Please recommence 3 days after discharge</item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e540"/>
+                           <code code="102.16026.4.1.1" codeSystem="1.2.36.1.2001.1001"
+                                 displayName="Current Medications On Discharge"
+                                 codeSystemName="NCTIS Data Components"/>
+                           <value xsi:type="CD" code="36692007" codeSystem="2.16.840.1.113883.6.96"
+                                  codeSystemName="SNOMED-CT"
+                                  displayName="Known"/>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                           <id root="d0e545"/>
+                           <text mediaType="text/plain">1 tablet once daily oral</text>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <period unit="Continue until finished"/>
+                           </effectiveTime>
+                           <consumable>
+                              <manufacturedProduct>
+                                 <manufacturedMaterial>
+                                    <code>
+                                       <originalText mediaType="text/plain">Doxycycline (100mg) tablet</originalText>
+                                    </code>
+                                 </manufacturedMaterial>
+                              </manufacturedProduct>
+                           </consumable>
+                           <performer typeCode="PRF">
+                              <assignedEntity>
+                                 <id nullFlavor="NA"/>
+                                 <code code="251511" codeSystem="2.16.840.1.113883.13.62"
+                                       codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                                       displayName="Pharmacist"/>
+                                 <addr use="WP">
+                                    <streetAddressLine>1 Stanley Street</streetAddressLine>
+                                    <city>Ringwood East</city>
+                                    <state>VIC</state>
+                                    <postalCode>3136</postalCode>
+                                 </addr>
+                                 <telecom value="tel:03 3256 8569" use="WP"/>
+                                 <assignedPerson>
+                                    <name use="L">
+                                       <prefix>Mrs</prefix>
+                                       <family>Grant</family>
+                                       <given>Susan</given>
+                                    </name>
+                                    <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                                       <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002027" extension="hpii"/>
+                                    </nehtaCDA:asEntityIdentifier>
+                                 </assignedPerson>
+                              </assignedEntity>
+                           </performer>
+                           <entryRelationship typeCode="SUBJ" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e546"/>
+                                 <code code="7147002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="New"/>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="RSON">
+                              <act classCode="ACT" moodCode="EVN">
+                                 <id root="d0e553"/>
+                                 <code>
+                                    <originalText mediaType="text/plain">Pneumonia</originalText>
+                                 </code>
+                              </act>
+                           </entryRelationship>
+                           <entryRelationship typeCode="REFR" inversionInd="true">
+                              <supply classCode="SPLY" moodCode="EVN">
+                                 <id root="d0e555"/>
+                                 <text mediaType="text/plain">2 tablets</text>
+                              </supply>
+                           </entryRelationship>
+                           <entryRelationship typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e603"/>
+                                 <code code="103.16044.4.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                       codeSystemName="NCTIS Data Components"
+                                       displayName="Additional Comments"/>
+                                 <text mediaType="text/plain"/>
+                              </observation>
+                           </entryRelationship>
+                        </substanceAdministration>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                           <id root="d0e604"/>
+                           <text mediaType="text/plain">1-2 tablets as required oral. Max 8 per day</text>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <period unit="Ongoing"/>
+                           </effectiveTime>
+                           <consumable>
+                              <manufacturedProduct>
+                                 <manufacturedMaterial>
+                                    <code>
+                                       <originalText mediaType="text/plain">Codalgin Forte (paracetamol 500mg + codeine phosphate 30mg) tablet</originalText>
+                                    </code>
+                                 </manufacturedMaterial>
+                              </manufacturedProduct>
+                           </consumable>
+                           <performer typeCode="PRF">
+                              <assignedEntity>
+                                 <id nullFlavor="NA"/>
+                                 <code code="251511" codeSystem="2.16.840.1.113883.13.62"
+                                       codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                                       displayName="Pharmacist"/>
+                                 <addr use="WP">
+                                    <streetAddressLine>1 Stanley Street</streetAddressLine>
+                                    <city>Ringwood East</city>
+                                    <state>VIC</state>
+                                    <postalCode>3136</postalCode>
+                                 </addr>
+                                 <telecom value="tel:03 3256 8569" use="WP"/>
+                                 <assignedPerson>
+                                    <name use="L">
+                                       <prefix>Mrs</prefix>
+                                       <family>Grant</family>
+                                       <given>Susan</given>
+                                    </name>
+                                    <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                                       <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002027" extension="hpii"/>
+                                    </nehtaCDA:asEntityIdentifier>
+                                 </assignedPerson>
+                              </assignedEntity>
+                           </performer>
+                           <entryRelationship typeCode="SUBJ" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e605"/>
+                                 <code code="7147002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="New"/>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="RSON">
+                              <act classCode="ACT" moodCode="EVN">
+                                 <id root="d0e612"/>
+                                 <code>
+                                    <originalText mediaType="text/plain">Pain management</originalText>
+                                 </code>
+                              </act>
+                           </entryRelationship>
+                           <entryRelationship typeCode="REFR" inversionInd="true">
+                              <supply classCode="SPLY" moodCode="EVN">
+                                 <id root="d0e614"/>
+                                 <text mediaType="text/plain">20 tablets</text>
+                              </supply>
+                           </entryRelationship>
+                           <entryRelationship typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e662"/>
+                                 <code code="103.16044.4.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                       codeSystemName="NCTIS Data Components"
+                                       displayName="Additional Comments"/>
+                                 <text mediaType="text/plain"/>
+                              </observation>
+                           </entryRelationship>
+                        </substanceAdministration>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                           <id root="d0e663"/>
+                           <text mediaType="text/plain">1 tablet once daily oral</text>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <period unit="Ongoing"/>
+                           </effectiveTime>
+                           <consumable>
+                              <manufacturedProduct>
+                                 <manufacturedMaterial>
+                                    <code>
+                                       <originalText mediaType="text/plain">Lasix (frusemide 40 mg) tablet</originalText>
+                                    </code>
+                                 </manufacturedMaterial>
+                              </manufacturedProduct>
+                           </consumable>
+                           <performer typeCode="PRF">
+                              <assignedEntity>
+                                 <id nullFlavor="NA"/>
+                                 <code code="251511" codeSystem="2.16.840.1.113883.13.62"
+                                       codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                                       displayName="Pharmacist"/>
+                                 <addr use="WP">
+                                    <streetAddressLine>1 Stanley Street</streetAddressLine>
+                                    <city>Ringwood East</city>
+                                    <state>VIC</state>
+                                    <postalCode>3136</postalCode>
+                                 </addr>
+                                 <telecom value="tel:03 3256 8569" use="WP"/>
+                                 <assignedPerson>
+                                    <name use="L">
+                                       <prefix>Mrs</prefix>
+                                       <family>Grant</family>
+                                       <given>Susan</given>
+                                    </name>
+                                    <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                                       <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002027" extension="hpii"/>
+                                    </nehtaCDA:asEntityIdentifier>
+                                 </assignedPerson>
+                              </assignedEntity>
+                           </performer>
+                           <entryRelationship typeCode="SUBJ" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e664"/>
+                                 <code code="18307000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="Altered"/>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="RSON">
+                              <act classCode="ACT" moodCode="EVN">
+                                 <id root="d0e671"/>
+                                 <code>
+                                    <originalText mediaType="text/plain">Fluid retention</originalText>
+                                 </code>
+                              </act>
+                           </entryRelationship>
+                           <entryRelationship typeCode="REFR" inversionInd="true">
+                              <supply classCode="SPLY" moodCode="EVN">
+                                 <id root="d0e673"/>
+                                 <text mediaType="text/plain">100 tablets</text>
+                              </supply>
+                           </entryRelationship>
+                           <entryRelationship typeCode="SPRT">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e676"/>
+                                 <code>
+                                    <originalText mediaType="text/plain">Dose decreased from 1 tablet Twice a day</originalText>
+                                 </code>
+                                 <entryRelationship typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="d0e679"/>
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                                             codeSystemName="NEHTA.ADMIN"
+                                             displayName="Assertion"/>
+                                       <value xsi:type="ST">Due to hypotension</value>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e725"/>
+                                 <code code="103.16044.4.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                       codeSystemName="NCTIS Data Components"
+                                       displayName="Additional Comments"/>
+                                 <text mediaType="text/plain"/>
+                              </observation>
+                           </entryRelationship>
+                        </substanceAdministration>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                           <id root="d0e726"/>
+                           <text mediaType="text/plain">1 tablet once daily oral</text>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <period unit="Ongoing"/>
+                           </effectiveTime>
+                           <consumable>
+                              <manufacturedProduct>
+                                 <manufacturedMaterial>
+                                    <code>
+                                       <originalText mediaType="text/plain">Cardiprin (aspirin 100mg) tablet</originalText>
+                                    </code>
+                                 </manufacturedMaterial>
+                              </manufacturedProduct>
+                           </consumable>
+                           <performer typeCode="PRF">
+                              <assignedEntity>
+                                 <id nullFlavor="NA"/>
+                                 <code code="251511" codeSystem="2.16.840.1.113883.13.62"
+                                       codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                                       displayName="Pharmacist"/>
+                                 <addr use="WP">
+                                    <streetAddressLine>1 Stanley Street</streetAddressLine>
+                                    <city>Ringwood East</city>
+                                    <state>VIC</state>
+                                    <postalCode>3136</postalCode>
+                                 </addr>
+                                 <telecom value="tel:03 3256 8569" use="WP"/>
+                                 <assignedPerson>
+                                    <name use="L">
+                                       <prefix>Mr</prefix>
+                                       <family>Thompson</family>
+                                       <given>Paul</given>
+                                    </name>
+                                    <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                                       <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002035" extension="hpii"/>
+                                    </nehtaCDA:asEntityIdentifier>
+                                 </assignedPerson>
+                              </assignedEntity>
+                           </performer>
+                           <entryRelationship typeCode="SUBJ" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e727"/>
+                                 <code code="247755007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="Withheld"/>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="RSON">
+                              <act classCode="ACT" moodCode="EVN">
+                                 <id root="d0e734"/>
+                                 <code>
+                                    <originalText mediaType="text/plain">Cardiovascular prophylaxis</originalText>
+                                 </code>
+                              </act>
+                           </entryRelationship>
+                           <entryRelationship typeCode="REFR" inversionInd="true">
+                              <supply classCode="SPLY" moodCode="EVN">
+                                 <id root="d0e736"/>
+                                 <text mediaType="text/plain">30 tablets</text>
+                              </supply>
+                           </entryRelationship>
+                           <entryRelationship typeCode="SPRT">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e739"/>
+                                 <code>
+                                    <originalText mediaType="text/plain">Withheld</originalText>
+                                 </code>
+                                 <entryRelationship typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="d0e742"/>
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                                             codeSystemName="NEHTA.ADMIN"
+                                             displayName="Assertion"/>
+                                       <value xsi:type="ST">Due to surgery</value>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="COMP">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e788"/>
+                                 <code code="103.16044.4.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                       codeSystemName="NCTIS Data Components"
+                                       displayName="Additional Comments"/>
+                                 <text mediaType="text/plain">Please recommence 3 days after discharge</text>
+                              </observation>
+                           </entryRelationship>
+                        </substanceAdministration>
+                     </entry>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <code code="102.16026.4.1.2" codeSystem="1.2.36.1.2001.1001"
+                           displayName="Ceased Medications"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Ceased Medications</title>
+                     <text>
+                        <list styleCode="xNEHTAItemDetail">
+                           <caption>Item Detail</caption>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Item Status</caption>Ceased</item>
+                           <item>
+                              <caption>Item Description</caption>Oxycodone hydrochloride (5mg) capsule</item>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Changes Made</caption>
+                           </item>
+                           <item>
+                              <caption>Reason For Change</caption>No longer required</item>
+                        </list>
+                        <list styleCode="xNEHTAItemDetail">
+                           <caption>Item Detail</caption>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Item Status</caption>Ceased</item>
+                           <item>
+                              <caption>Item Description</caption>Celebrex (celecoxib 200mg) capsule</item>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Changes Made</caption>
+                           </item>
+                           <item>
+                              <caption>Reason For Change</caption>Ceased due to scheduled surgery</item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e790"/>
+                           <code code="102.16026.4.1.2" codeSystem="1.2.36.1.2001.1001"
+                                 displayName="Ceased Medications"
+                                 codeSystemName="NCTIS Data Components"/>
+                           <value xsi:type="CD" code="36692007" codeSystem="2.16.840.1.113883.6.96"
+                                  codeSystemName="SNOMED-CT"
+                                  displayName="Known"/>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                           <id root="d0e795"/>
+                           <consumable>
+                              <manufacturedProduct>
+                                 <manufacturedMaterial>
+                                    <code>
+                                       <originalText mediaType="text/plain">Oxycodone hydrochloride (5mg) capsule</originalText>
+                                    </code>
+                                 </manufacturedMaterial>
+                              </manufacturedProduct>
+                           </consumable>
+                           <entryRelationship typeCode="SUBJ" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e796"/>
+                                 <code code="274512008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="Ceased"/>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="SPRT">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e801"/>
+                                 <code/>
+                                 <entryRelationship typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="d0e803"/>
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                                             codeSystemName="NEHTA.ADMIN"
+                                             displayName="Assertion"/>
+                                       <value xsi:type="ST">No longer required</value>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entryRelationship>
+                        </substanceAdministration>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <substanceAdministration moodCode="EVN" classCode="SBADM">
+                           <id root="d0e804"/>
+                           <consumable>
+                              <manufacturedProduct>
+                                 <manufacturedMaterial>
+                                    <code>
+                                       <originalText mediaType="text/plain">Celebrex (celecoxib 200mg) capsule</originalText>
+                                    </code>
+                                 </manufacturedMaterial>
+                              </manufacturedProduct>
+                           </consumable>
+                           <entryRelationship typeCode="SUBJ" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e805"/>
+                                 <code code="274512008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="Ceased"/>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="SPRT">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e810"/>
+                                 <code/>
+                                 <entryRelationship typeCode="RSON">
+                                    <observation classCode="OBS" moodCode="EVN">
+                                       <id root="d0e812"/>
+                                       <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                                             codeSystemName="NEHTA.ADMIN"
+                                             displayName="Assertion"/>
+                                       <value xsi:type="ST">Ceased due to scheduled surgery</value>
+                                    </observation>
+                                 </entryRelationship>
+                              </observation>
+                           </entryRelationship>
+                        </substanceAdministration>
+                     </entry>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <code code="101.16011.4.1.1" displayName="Health Profile"
+                     codeSystem="1.2.36.1.2001.1001.101"
+                     codeSystemName="NCTIS Data Components"/>
+               <title>Health Profile</title>
+               <component>
+                  <section>
+                     <code code="102.15536.4.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                           displayName="Adverse Reactions"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Adverse Reactions</title>
+                     <text>
+                        <list styleCode="xNEHTAAdverseReaction">
+                           <caption>Adverse Reaction </caption>
+                           <item>
+                              <caption>Presence</caption>present</item>
+                           <item>
+                              <caption>Agent Description</caption>Penicillin</item>
+                           <item styleCode="xNEHTAReactionDetail">
+                              <list>
+                                 <caption>Reaction Detail</caption>
+                                 <item>
+                                    <caption>Reaction Description</caption>Severe urticaria</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAReactionDetail">
+                              <list>
+                                 <caption>Reaction Detail</caption>
+                                 <item>
+                                    <caption>Reaction Description</caption> on trunk</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAReactionDetail">
+                              <list>
+                                 <caption>Reaction Detail</caption>
+                                 <item>
+                                    <caption>Reaction Description</caption> and legs</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAReactionDetail">
+                              <list>
+                                 <caption>Reaction Detail</caption>
+                                 <item>
+                                    <caption>Reaction Description</caption> Nausea and vomiting</item>
+                              </list>
+                           </item>
+                        </list>
+                        <list styleCode="xNEHTAAdverseReaction">
+                           <caption>Adverse Reaction </caption>
+                           <item>
+                              <caption>Presence</caption>present</item>
+                           <item>
+                              <caption>Agent Description</caption>Metoprolol</item>
+                           <item styleCode="xNEHTAReactionDetail">
+                              <list>
+                                 <caption>Reaction Detail</caption>
+                                 <item>
+                                    <caption>Reaction Description</caption>Acute exacerbation of chronic obstructive airways disease</item>
+                              </list>
+                           </item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e862"/>
+                           <code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" displayName="Assertion"/>
+                           <value xsi:type="CD" code="36692007" codeSystem="2.16.840.1.113883.6.96"
+                                  codeSystemName="SNOMED-CT"
+                                  displayName="Known"/>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e864"/>
+                           <code code="52101004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="present"/>
+                           <participant typeCode="CAGNT">
+                              <participantRole classCode="ROL">
+                                 <playingEntity classCode="ENT" determinerCode="INSTANCE">
+                                    <code code="6369005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                          displayName="Penicillin"/>
+                                 </playingEntity>
+                              </participantRole>
+                           </participant>
+                           <entryRelationship typeCode="MFST" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e870"/>
+                                 <code code="64305001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="Severe urticaria">
+                                    <originalText mediaType="text/plain">Severe urticaria</originalText>
+                                 </code>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="MFST" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e874"/>
+                                 <code code="22943007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName=" on trunk">
+                                    <originalText mediaType="text/plain"> on trunk</originalText>
+                                 </code>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="MFST" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e878"/>
+                                 <code code="42694008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName=" and legs">
+                                    <originalText mediaType="text/plain"> and legs</originalText>
+                                 </code>
+                              </observation>
+                           </entryRelationship>
+                           <entryRelationship typeCode="MFST" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e882"/>
+                                 <code code="167826004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName=" Nausea and vomiting">
+                                    <originalText mediaType="text/plain"> Nausea and vomiting</originalText>
+                                 </code>
+                              </observation>
+                           </entryRelationship>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e885"/>
+                           <code code="52101004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="present"/>
+                           <participant typeCode="CAGNT">
+                              <participantRole classCode="ROL">
+                                 <playingEntity classCode="ENT" determinerCode="INSTANCE">
+                                    <code code="6586221356" codeSystem="2.16.840.1.113883.6.96"
+                                          codeSystemName="SNOMED-CT"
+                                          displayName="Metoprolol"/>
+                                 </playingEntity>
+                              </participantRole>
+                           </participant>
+                           <entryRelationship typeCode="MFST" inversionInd="true">
+                              <observation classCode="OBS" moodCode="EVN">
+                                 <id root="d0e891"/>
+                                 <code code="195951007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                       displayName="Acute exacerbation of chronic obstructive airways disease">
+                                    <originalText mediaType="text/plain">Acute exacerbation of chronic obstructive airways disease</originalText>
+                                 </code>
+                              </observation>
+                           </entryRelationship>
+                        </observation>
+                     </entry>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <code code="101.20121.4.1.1" codeSystem="1.2.36.1.2001.1001.101" displayName="Alerts"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Alerts</title>
+                     <text>
+                        <list styleCode="xNEHTAAlert">
+                           <caption>Alert </caption>
+                           <item>
+                              <caption>Alert Type</caption>Clinical</item>
+                           <item>
+                              <caption>Alert Description</caption>At risk of pressure sores due to easily damaged skin</item>
+                        </list>
+                        <list styleCode="xNEHTAAlert">
+                           <caption>Alert </caption>
+                           <item>
+                              <caption>Alert Type</caption>Advance Care Directive</item>
+                           <item>
+                              <caption>Alert Description</caption>Present</item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e895"/>
+                           <code code="58147004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Clinical"/>
+                           <value xsi:type="CD" code="285304000" codeSystem="2.16.840.1.113883.6.96"
+                                  codeSystemName="SNOMED-CT"
+                                  displayName="At risk of pressure sores due to easily damaged skin"/>
+                        </observation>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <id root="d0e900"/>
+                           <code code="161056001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"
+                                 displayName="Advance Care Directive"/>
+                           <value xsi:type="CD" code="52101004" codeSystem="2.16.840.1.113883.6.96"
+                                  codeSystemName="SNOMED-CT"
+                                  displayName="Present"/>
+                        </observation>
+                     </entry>
+                  </section>
+               </component>
+            </section>
+         </component>
+         <component>
+            <section>
+               <code code="101.16020.4.1.1" displayName="Plan" codeSystem="1.2.36.1.2001.1001.101"
+                     codeSystemName="NCTIS Data Components"/>
+               <title>Plan</title>
+               <component>
+                  <section>
+                     <code code="102.20158.4.1.1" displayName="Arranged Services"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Arranged Services</title>
+                     <text>
+                        <list styleCode="xNEHTAArrangedService xNEHTARequestedService">
+                           <caption>Requested Service</caption>
+                           <item>
+                              <caption>Service Booking Status</caption>Confirmed           </item>
+                           <item styleCode="xNEHTAcodeableText">
+                              <caption>Service Description</caption>Orthopaedic outpatient clinic appointment for 4 weeks post-discharge progress review</item>
+                           <item styleCode="xNEHTAtimeInterval">
+                              <list>
+                                 <caption>Commencement Window</caption>
+                                 <item styleCode="xNEHTAdateTime">
+                                    <caption>From</caption>20101216</item>
+                              </list>
+                           </item>
+                           <item styleCode="xNEHTAServiceProvider">
+                              <list>
+                                 <caption>Service Provider</caption>
+                                 <item styleCode="xNEHTAcodeableText">
+                                    <caption>Healthcare Role</caption>Orthopaedic Surgeon</item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003630000000822</item>
+                                       <item>
+                                          <caption>Extension</caption>hpio</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>Name</caption>Fairhill Health Hospital</item>
+                                 <item styleCode="xNEHTAAddress">
+                                    <list>
+                                       <caption>Address</caption>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Purpose</caption>
+                                       </item>
+                                       <item>1 Stanley Street</item>
+                                       <item>
+                                          <caption>Locality</caption>Ringwood East</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>State/Territory</caption>VIC</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Postcode</caption>
+                                       </item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAElectronicCommunicationDetail">
+                                    <list>
+                                       <caption>Electronic Communication Detail</caption>
+                                       <item>
+                                          <caption>tel</caption>03 3256 8569</item>
+                                       <item>
+                                          <caption>Usage</caption>WP</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003620000002050</item>
+                                       <item>
+                                          <caption>Extension</caption>hpii</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAPerson xNEHTAAssignedPerson">
+                                    <list>
+                                       <caption>Assigned Person</caption>
+                                       <item styleCode="xNEHTAPersonName">
+                                          <list>
+                                             <caption>Person Name</caption>
+                                             <item>
+                                                <caption>Usage</caption>Legal name</item>
+                                             <item styleCode="xNEHTAcodeableText">
+                                                <caption>Name Title</caption>Dr</item>
+                                             <item>
+                                                <caption>Family Name</caption>Williams</item>
+                                             <item>
+                                                <caption>Given Name</caption>Horace</item>
+                                          </list>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <act classCode="ACT" moodCode="RQO">
+                           <id root="d0e907"/>
+                           <code>
+                              <originalText mediaType="text/plain">Orthopaedic outpatient clinic appointment for 4 weeks post-discharge progress review</originalText>
+                           </code>
+                           <effectiveTime xsi:type="IVL_TS">
+                              <low value="20101216"/>
+                           </effectiveTime>
+                           <performer typeCode="PRF">
+                              <assignedEntity>
+                                 <id nullFlavor="NA"/>
+                                 <code xmlns="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1" code="253514"
+                                       codeSystem="2.16.840.1.113883.13.62"
+                                       codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                                       displayName="Orthopaedic Surgeon"/>
+                                 <addr use="WP">
+                                    <streetAddressLine>1 Stanley Street</streetAddressLine>
+                                    <city>Ringwood East</city>
+                                    <state>VIC</state>
+                                    <postalCode>3136</postalCode>
+                                 </addr>
+                                 <telecom value="tel:03 3256 8569" use="WP"/>
+                                 <assignedPerson>
+                                    <name use="L">
+                                       <prefix>Dr</prefix>
+                                       <family>Williams</family>
+                                       <given>Horace</given>
+                                    </name>
+                                    <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                                       <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000002050" extension="hpii"/>
+                                    </nehtaCDA:asEntityIdentifier>
+                                 </assignedPerson>
+                              </assignedEntity>
+                           </performer>
+                        </act>
+                     </entry>
+                  </section>
+               </component>
+               <component>
+                  <section>
+                     <code code="101.20116.4.1.1" displayName="Recommendations and Information Provided"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"/>
+                     <title>Recommendations and Information Provided</title>
+                     <text>
+                        <list styleCode="xNEHTARecommendationsProvided">
+                           <caption>Recommendations Provided</caption>
+                           <item styleCode="xNEHTASupplementaryInformationRecipient">
+                              <list>
+                                 <caption>Supplementary Information Recipient</caption>
+                                 <item styleCode="xNEHTAcodeableText">
+                                    <caption>Healthcare Role</caption>General Practitioner</item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003630000000541</item>
+                                       <item>
+                                          <caption>Extension</caption>hpio</item>
+                                    </list>
+                                 </item>
+                                 <item>
+                                    <caption>Name</caption>Croydon GP Centre</item>
+                                 <item styleCode="xNEHTAAddress">
+                                    <list>
+                                       <caption>Address</caption>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Purpose</caption>
+                                       </item>
+                                       <item>23 Anzac Street</item>
+                                       <item>
+                                          <caption>Locality</caption>Croydon</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>State/Territory</caption>VIC</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Postcode</caption>
+                                       </item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAElectronicCommunicationDetail">
+                                    <list>
+                                       <caption>Electronic Communication Detail</caption>
+                                       <item>
+                                          <caption>tel</caption>03 4575 4566</item>
+                                       <item>
+                                          <caption>Usage</caption>WP</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003620000001706</item>
+                                       <item>
+                                          <caption>Extension</caption>hpii</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAPerson xNEHTAAssignedPerson">
+                                    <list>
+                                       <caption>Assigned Person</caption>
+                                       <item styleCode="xNEHTAPersonName">
+                                          <list>
+                                             <caption>Person Name</caption>
+                                             <item>
+                                                <caption>Usage</caption>Legal name</item>
+                                             <item styleCode="xNEHTAcodeableText">
+                                                <caption>Name Title</caption>Dr</item>
+                                             <item>
+                                                <caption>Family Name</caption>Anderson</item>
+                                             <item>
+                                                <caption>Given Name</caption>Jane</item>
+                                          </list>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                           <item>
+                              <caption>Supplementary Information Note</caption>Please remove the staples on Nov 21 2010. Please ensure aspirin is recommenced 3 days post discharge. Please follow-up anaemia.</item>
+                        </list>
+                        <list styleCode="xNEHTARecommendationsProvided">
+                           <caption>Recommendations Provided</caption>
+                           <item styleCode="xNEHTASupplementaryInformationRecipient">
+                              <list>
+                                 <caption>Supplementary Information Recipient</caption>
+                                 <item styleCode="xNEHTAcodeableText">
+                                    <caption>Healthcare Role</caption>Patient</item>
+                                 <item styleCode="xNEHTAAddress">
+                                    <list>
+                                       <caption>Address</caption>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Purpose</caption>Business</item>
+                                       <item>10 Browning Street</item>
+                                       <item>
+                                          <caption>Locality</caption>West End</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>State/Territory</caption>QLD</item>
+                                       <item styleCode="xNEHTAcodeableText">
+                                          <caption>Postcode</caption>
+                                       </item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAElectronicCommunicationDetail">
+                                    <list>
+                                       <caption>Electronic Communication Detail</caption>
+                                       <item>
+                                          <caption>tel</caption>0730238400</item>
+                                       <item>
+                                          <caption>Usage</caption>WP</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAuniqueIdentifier">
+                                    <list>
+                                       <caption>Entity Identifer</caption>
+                                       <item>
+                                          <caption>Root</caption>1.2.36.1.2001.1003.0.8003609876543210</item>
+                                       <item>
+                                          <caption>Extension</caption>ihi</item>
+                                    </list>
+                                 </item>
+                                 <item styleCode="xNEHTAPerson xNEHTAAssignedPerson">
+                                    <list>
+                                       <caption>Assigned Person</caption>
+                                       <item styleCode="xNEHTAPersonName">
+                                          <list>
+                                             <caption>Person Name</caption>
+                                             <item>
+                                                <caption>Usage</caption>Legal name</item>
+                                             <item styleCode="xNEHTAcodeableText">
+                                                <caption>Name Title</caption>Mr</item>
+                                             <item>
+                                                <caption>Family Name</caption>Citizen</item>
+                                             <item>
+                                                <caption>Given Name</caption>Fred</item>
+                                          </list>
+                                       </item>
+                                    </list>
+                                 </item>
+                              </list>
+                           </item>
+                           <item>
+                              <caption>Supplementary Information Note</caption>Return to GP on Nov 21 2010 to have the staples removed. Keep up regular mobility routine as guided by physiotherapist. Please recommence aspirin 3 days post discharge.</item>
+                        </list>
+                        <list styleCode="xNEHTAInformationProvided">
+                           <caption>Information Provided</caption>
+                           <item>
+                              <caption>Supplementary Information Note</caption>Patient was given a brochure explaining the expected post-op recovery following a total knee replacement. The physiotherapist provided a list of home exercises. The good prognosis for return to activity was discussed with the patient – likely to be able to walk with a stick at six weeks.</item>
+                        </list>
+                     </text>
+                     <entry typeCode="DRIV">
+                        <act moodCode="PRP" classCode="INFRM">
+                           <id root="d0e961"/>
+                           <code code="102.20116.4.1.2" codeSystem="1.2.36.1.2001.1001"
+                                 displayName="Recommendations Provided"
+                                 codeSystemName="NCTIS Data Components"/>
+                           <text>Please remove the staples on Nov 21 2010. Please ensure aspirin is recommenced 3 days post discharge. Please follow-up anaemia.</text>
+                           <performer typeCode="PRF">
+                              <assignedEntity>
+                                 <id nullFlavor="NA"/>
+                                 <code xmlns="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1" code="253111"
+                                       codeSystem="2.16.840.1.113883.13.62"
+                                       codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                                       displayName="General Practitioner"/>
+                                 <addr use="WP">
+                                    <streetAddressLine>23 Anzac Street</streetAddressLine>
+                                    <city>Croydon</city>
+                                    <state>VIC</state>
+                                    <postalCode>3136</postalCode>
+                                 </addr>
+                                 <telecom value="tel:03 4575 4566" use="WP"/>
+                                 <assignedPerson>
+                                    <name use="L">
+                                       <prefix>Dr</prefix>
+                                       <family>Anderson</family>
+                                       <given>Jane</given>
+                                    </name>
+                                    <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                                       <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003620000001706" extension="hpii"/>
+                                    </nehtaCDA:asEntityIdentifier>
+                                 </assignedPerson>
+                              </assignedEntity>
+                           </performer>
+                        </act>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <act moodCode="PRP" classCode="INFRM">
+                           <id root="d0e1008"/>
+                           <code code="102.20116.4.1.2" codeSystem="1.2.36.1.2001.1001"
+                                 displayName="Recommendations Provided"
+                                 codeSystemName="NCTIS Data Components"/>
+                           <text>Return to GP on Nov 21 2010 to have the staples removed. Keep up regular mobility routine as guided by physiotherapist. Please recommence aspirin 3 days post discharge.</text>
+                           <performer typeCode="PRF">
+                              <assignedEntity>
+                                 <id nullFlavor="NA"/>
+                                 <code xmlns="http://ns.electronichealth.net.au/Ci/Cda/Extensions/1.1" code="253999"
+                                       codeSystem="2.16.840.1.113883.13.62"
+                                       codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1"
+                                       displayName="Patient"/>
+                                 <addr use="H">
+                                    <streetAddressLine>10 Browning Street</streetAddressLine>
+                                    <city>West End</city>
+                                    <state>QLD</state>
+                                    <postalCode>4101</postalCode>
+                                 </addr>
+                                 <telecom value="tel:0730238400" use="WP"/>
+                                 <assignedPerson>
+                                    <name use="L">
+                                       <prefix>Mr</prefix>
+                                       <family>Citizen</family>
+                                       <given>Fred</given>
+                                    </name>
+                                    <nehtaCDA:asEntityIdentifier classCode="IDENT">
+                                       <nehtaCDA:id root="1.2.36.1.2001.1003.0.8003609876543210" extension="ihi"/>
+                                    </nehtaCDA:asEntityIdentifier>
+                                 </assignedPerson>
+                              </assignedEntity>
+                           </performer>
+                        </act>
+                     </entry>
+                     <entry typeCode="DRIV">
+                        <act moodCode="EVN" classCode="INFRM">
+                           <id root="d0e1058"/>
+                           <code code="102.20116.4.1.1" codeSystem="1.2.36.1.2001.1001"
+                                 displayName="Information Provided"
+                                 codeSystemName="NCTIS Data Components"/>
+                           <text>Patient was given a brochure explaining the expected post-op recovery following a total knee replacement. The physiotherapist provided a list of home exercises. The good prognosis for return to activity was discussed with the patient – likely to be able to walk with a stick at six weeks.</text>
+                        </act>
+                     </entry>
+                  </section>
+               </component>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</ClinicalDocument>
